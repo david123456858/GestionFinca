@@ -1,0 +1,12 @@
+C:\Users\juand\source\repos\GestionFinca\Entidades\bin\Debug\Entidades.dll
+C:\Users\juand\source\repos\GestionFinca\Entidades\bin\Debug\Entidades.pdb
+C:\Users\juand\source\repos\GestionFinca\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\juand\source\repos\GestionFinca\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\juand\source\repos\GestionFinca\Entidades\obj\Debug\Entidades.dll
+C:\Users\juand\source\repos\GestionFinca\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Entidades\bin\Debug\Entidades.dll
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Entidades\obj\Debug\Entidades.dll
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Entidades\obj\Debug\Entidades.pdb

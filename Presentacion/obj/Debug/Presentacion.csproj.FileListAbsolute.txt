@@ -1,0 +1,51 @@
+C:\Users\juand\source\repos\GestionFinca\Presentacion\bin\Debug\Presentacion.exe.config
+C:\Users\juand\source\repos\GestionFinca\Presentacion\bin\Debug\Presentacion.exe
+C:\Users\juand\source\repos\GestionFinca\Presentacion\bin\Debug\Presentacion.pdb
+C:\Users\juand\source\repos\GestionFinca\Presentacion\bin\Debug\Entidades.dll
+C:\Users\juand\source\repos\GestionFinca\Presentacion\bin\Debug\Logica.dll
+C:\Users\juand\source\repos\GestionFinca\Presentacion\bin\Debug\Entidades.pdb
+C:\Users\juand\source\repos\GestionFinca\Presentacion\bin\Debug\Logica.pdb
+C:\Users\juand\source\repos\GestionFinca\Presentacion\obj\Debug\Presentacion.csproj.AssemblyReference.cache
+C:\Users\juand\source\repos\GestionFinca\Presentacion\obj\Debug\Presentacion.csproj.SuggestedBindingRedirects.cache
+C:\Users\juand\source\repos\GestionFinca\Presentacion\obj\Debug\Presentacion.Login.resources
+C:\Users\juand\source\repos\GestionFinca\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.cache
+C:\Users\juand\source\repos\GestionFinca\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\juand\source\repos\GestionFinca\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
+C:\Users\juand\source\repos\GestionFinca\Presentacion\obj\Debug\Presentacion.exe
+C:\Users\juand\source\repos\GestionFinca\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\Kadir\OneDrive\Escritorio\PROYECTO PROG\GestionFinca\Presentacion\bin\Debug\Presentacion.exe.config
+C:\Users\Kadir\OneDrive\Escritorio\PROYECTO PROG\GestionFinca\Presentacion\bin\Debug\Presentacion.exe
+C:\Users\Kadir\OneDrive\Escritorio\PROYECTO PROG\GestionFinca\Presentacion\bin\Debug\Presentacion.pdb
+C:\Users\Kadir\OneDrive\Escritorio\PROYECTO PROG\GestionFinca\Presentacion\bin\Debug\Entidades.dll
+C:\Users\Kadir\OneDrive\Escritorio\PROYECTO PROG\GestionFinca\Presentacion\bin\Debug\Logica.dll
+C:\Users\Kadir\OneDrive\Escritorio\PROYECTO PROG\GestionFinca\Presentacion\bin\Debug\Entidades.pdb
+C:\Users\Kadir\OneDrive\Escritorio\PROYECTO PROG\GestionFinca\Presentacion\bin\Debug\Logica.pdb
+C:\Users\Kadir\OneDrive\Escritorio\PROYECTO PROG\GestionFinca\Presentacion\obj\Debug\Presentacion.csproj.AssemblyReference.cache
+C:\Users\Kadir\OneDrive\Escritorio\PROYECTO PROG\GestionFinca\Presentacion\obj\Debug\Presentacion.csproj.SuggestedBindingRedirects.cache
+C:\Users\Kadir\OneDrive\Escritorio\PROYECTO PROG\GestionFinca\Presentacion\obj\Debug\Presentacion.Login.resources
+C:\Users\Kadir\OneDrive\Escritorio\PROYECTO PROG\GestionFinca\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
+C:\Users\Kadir\OneDrive\Escritorio\PROYECTO PROG\GestionFinca\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.cache
+C:\Users\Kadir\OneDrive\Escritorio\PROYECTO PROG\GestionFinca\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\Kadir\OneDrive\Escritorio\PROYECTO PROG\GestionFinca\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
+C:\Users\Kadir\OneDrive\Escritorio\PROYECTO PROG\GestionFinca\Presentacion\obj\Debug\Presentacion.exe
+C:\Users\Kadir\OneDrive\Escritorio\PROYECTO PROG\GestionFinca\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\Kadir\OneDrive\Escritorio\PROYECTO PROG\GestionFinca\Presentacion\obj\Debug\Presentacion.ManejoAdmin.resources
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Presentacion\bin\Debug\Presentacion.exe.config
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Presentacion\bin\Debug\Presentacion.exe
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Presentacion\bin\Debug\Presentacion.pdb
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Presentacion\bin\Debug\Entidades.dll
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Presentacion\bin\Debug\Logica.dll
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Presentacion\bin\Debug\Entidades.pdb
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Presentacion\bin\Debug\Logica.pdb
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Presentacion\obj\Debug\Presentacion.csproj.AssemblyReference.cache
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Presentacion\obj\Debug\Presentacion.csproj.SuggestedBindingRedirects.cache
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Presentacion\obj\Debug\Presentacion.Login.resources
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Presentacion\obj\Debug\Presentacion.ManejoAdmin.resources
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.cache
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Presentacion\obj\Debug\Presentacion.exe
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Presentacion\bin\Debug\Datos.dll
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Presentacion\bin\Debug\Datos.pdb

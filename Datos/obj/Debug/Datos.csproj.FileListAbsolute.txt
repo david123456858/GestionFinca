@@ -1,0 +1,27 @@
+C:\Users\juand\source\repos\GestionFinca\Datos\bin\Debug\Datos.dll
+C:\Users\juand\source\repos\GestionFinca\Datos\bin\Debug\Datos.pdb
+C:\Users\juand\source\repos\GestionFinca\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\juand\source\repos\GestionFinca\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\juand\source\repos\GestionFinca\Datos\obj\Debug\Datos.dll
+C:\Users\juand\source\repos\GestionFinca\Datos\obj\Debug\Datos.pdb
+C:\Users\juand\source\repos\GestionFinca\Datos\bin\Debug\Entidades.dll
+C:\Users\juand\source\repos\GestionFinca\Datos\bin\Debug\Entidades.pdb
+C:\Users\juand\source\repos\GestionFinca\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\Users\Kadir\OneDrive\Escritorio\PROYECTO PROG\GestionFinca\Datos\bin\Debug\Datos.dll
+C:\Users\Kadir\OneDrive\Escritorio\PROYECTO PROG\GestionFinca\Datos\bin\Debug\Datos.pdb
+C:\Users\Kadir\OneDrive\Escritorio\PROYECTO PROG\GestionFinca\Datos\bin\Debug\Entidades.dll
+C:\Users\Kadir\OneDrive\Escritorio\PROYECTO PROG\GestionFinca\Datos\bin\Debug\Entidades.pdb
+C:\Users\Kadir\OneDrive\Escritorio\PROYECTO PROG\GestionFinca\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\Kadir\OneDrive\Escritorio\PROYECTO PROG\GestionFinca\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\Kadir\OneDrive\Escritorio\PROYECTO PROG\GestionFinca\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\Users\Kadir\OneDrive\Escritorio\PROYECTO PROG\GestionFinca\Datos\obj\Debug\Datos.dll
+C:\Users\Kadir\OneDrive\Escritorio\PROYECTO PROG\GestionFinca\Datos\obj\Debug\Datos.pdb
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Datos\bin\Debug\Datos.dll
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Datos\bin\Debug\Datos.pdb
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Datos\bin\Debug\Entidades.dll
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Datos\bin\Debug\Entidades.pdb
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Datos\obj\Debug\Datos.dll
+C:\Users\Zeus\Documents\GestionFinca-main\GestionFinca-main\Datos\obj\Debug\Datos.pdb
