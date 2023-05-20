@@ -20,11 +20,10 @@ namespace Presentacion
             InitializeComponent();
         }
 
-
         ICafe ServiciosCafe = new ICafe();  //CAFE A RECOGER
-        IVentas ServicioVentas= new IVentas(); //SERVICIO DE VENTAS
-        ICafe_Escogido ServicioCafeEscogido= new ICafe_Escogido(); //SERVICIO EL CUAL ACUMULA LO QUE SE TOMÓ POR CEDULA EN UNA FECHA
-        IEmpleados ServicioEmpleados= new IEmpleados(); //SERVICIO PARA REGISTRO DE EMPLEADOS
+        IVentas ServicioVentas = new IVentas(); //SERVICIO DE VENTAS
+        ICafe_Escogido ServicioCafeEscogido = new ICafe_Escogido(); //SERVICIO EL CUAL ACUMULA LO QUE SE TOMÓ POR CEDULA EN UNA FECHA
+        IEmpleados ServicioEmpleados = new IEmpleados(); //SERVICIO PARA REGISTRO DE EMPLEADOS
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -56,20 +55,16 @@ namespace Presentacion
             RegistroCafe();
         }
 
-        
-
         private void btnRegistrarVentas_Click(object sender, EventArgs e)
         {
             RegistroVentas();
         }
 
-       
         private void btnRegisEsCo_Click(object sender, EventArgs e)
         {
             RegistrosEscogidos();
         }
 
-       
         private void tabPage4_Click(object sender, EventArgs e)
         {
 
@@ -89,11 +84,8 @@ namespace Presentacion
             }
             else
             {
-
                 try
                 {
-                    
-
                     Registrado_Cafe cafe = new Registrado_Cafe();
 
                     cafe.Kilos_secos = int.Parse(TxtKilosS.Text.Trim());
@@ -111,8 +103,6 @@ namespace Presentacion
                 {
                     MessageBox.Show("ERROR AL REGISTRAR CAFE");
                 }
-
-
             }
         }
 
@@ -120,14 +110,13 @@ namespace Presentacion
         {
             List<Registrado_Cafe> ListCafe = ServiciosCafe.GetAll();
 
-            if ((ListCafe == null) || (ListCafe.Count==0))
+            if ((ListCafe == null) || (ListCafe.Count == 0))
             {
                 return;
             }
             else
             {
                 dataGridCafe.Rows.Clear();
-
                 foreach (var cafe in ListCafe)
                 {
 
@@ -146,11 +135,9 @@ namespace Presentacion
                     CeldFecha.Value = cafe.Fecha.ToShortDateString();
                     fila.Cells.Add(CeldFecha);
 
-                   
+
                     dataGridCafe.Rows.Add(fila); //agregar las filas al datagriw
                 }
-
-
             }
         }
 
@@ -158,7 +145,6 @@ namespace Presentacion
         {
             TxtKilosC.Clear();
             TxtKilosS.Clear();
-
         }
 
         void VerDatosVentas()
@@ -174,7 +160,6 @@ namespace Presentacion
                 dataGridVenta.Rows.Clear();
                 foreach (var Venta in ListVenta)
                 {
-
                     DataGridViewRow fila = new DataGridViewRow(); //CREAR NUEVA FILA PARA EL DATAGRIW
 
                     // Agregar las celdas a la fila
@@ -182,47 +167,42 @@ namespace Presentacion
                     CeldRef.Value = Venta.Id_ventas;
                     fila.Cells.Add(CeldRef);
 
-                    DataGridViewCell CeldKilos = new DataGridViewTextBoxCell();
-                    CeldKilos.Value = Venta.Kilos;
-                    fila.Cells.Add(CeldKilos);
+                    DataGridViewCell CeldFactor = new DataGridViewTextBoxCell();
+                    CeldFactor.Value = Venta.Factor;
+                    fila.Cells.Add(CeldFactor);
 
                     DataGridViewCell CeldValorKilos = new DataGridViewTextBoxCell();
                     CeldValorKilos.Value = Venta.Valor_Kilo;
                     fila.Cells.Add(CeldValorKilos);
 
-                    DataGridViewCell CeldFecha = new DataGridViewTextBoxCell();
-                    CeldFecha.Value = Venta.Fecha.ToShortDateString();
-                    fila.Cells.Add(CeldFecha);
+                    DataGridViewCell CeldKilos = new DataGridViewTextBoxCell();
+                    CeldKilos.Value = Venta.Kilos;
+                    fila.Cells.Add(CeldKilos);
 
                     DataGridViewCell CeldTotal = new DataGridViewTextBoxCell();
                     CeldTotal.Value = Venta.Total;
                     fila.Cells.Add(CeldTotal);
 
+                    DataGridViewCell CeldFecha = new DataGridViewTextBoxCell();
+                    CeldFecha.Value = Venta.Fecha.ToShortDateString();
+                    fila.Cells.Add(CeldFecha);
 
-                    DataGridViewCell CeldFactor = new DataGridViewTextBoxCell();
-                    CeldFactor.Value = Venta.Factor;
-                    fila.Cells.Add(CeldFactor);
                     dataGridVenta.Rows.Add(fila); //agregar las filas al datagriw
                 }
-
-
             }
         }
 
-        
+
         void RegistroVentas()
         {
-            if (string.IsNullOrEmpty(TxtRef.Text) || (string.IsNullOrEmpty(TxtKilosL.Text)) || (string.IsNullOrEmpty(TxtValorxK.Text)) || (string.IsNullOrEmpty(TxtFactor.Text)) || (string.IsNullOrEmpty(TxtTotalP.Text)))
+            if (string.IsNullOrEmpty(TxtRef.Text) || (string.IsNullOrEmpty(TxtKilosL.Text)) || (string.IsNullOrEmpty(TxtValorxK.Text)) || (string.IsNullOrEmpty(TxtFactor.Text)) /*|| (string.IsNullOrEmpty(TxtTotalP.Text))*/)
             {
-
                 MessageBox.Show("POR FAVOR LLENE TODOS LOS CAMPOS");
             }
             else
             {
-
                 try
                 {
-
                     Registro_Ventas Venta = new Registro_Ventas();
 
                     Venta.Id_ventas = TxtRef.Text.Trim();
@@ -230,7 +210,7 @@ namespace Presentacion
                     Venta.Valor_Kilo = float.Parse(TxtValorxK.Text.Trim());
                     Venta.Factor = TxtFactor.Text.Trim();
                     Venta.Fecha = FechaVentas.Value;
-                    Venta.Total = decimal.Parse(TxtTotalP.Text.Trim());
+                    //Venta.Total = decimal.Parse(TxtTotalP.Text.Trim());
 
                     string respuesta = ServicioVentas.Add(Venta);
 
@@ -243,11 +223,8 @@ namespace Presentacion
                 {
                     MessageBox.Show("ERROR AL REGISTRAR VENTA");
                 }
-
-
             }
         }
-
 
 
         void LimpiarCamposVentas()
@@ -256,7 +233,7 @@ namespace Presentacion
             TxtKilosL.Clear();
             TxtValorxK.Clear();
             TxtFactor.Clear();
-            TxtTotalP.Clear();
+            //TxtTotalP.Clear();
         }
 
         void RegistrosEscogidos()
@@ -268,10 +245,8 @@ namespace Presentacion
             }
             else
             {
-
                 try
                 {
-
                     Empleado_Escogidos Empleado = new Empleado_Escogidos();
 
                     Empleado.Cc_empleado = TxtCC.Text;
@@ -284,15 +259,13 @@ namespace Presentacion
                     LimpiarRegisEscogidos();
                     VerDatosRegisEsc();
                 }
-
                 catch (Exception)
                 {
                     MessageBox.Show("ERROR DE REGISTRO");
                 }
-
-
             }
         }
+
         void VerDatosRegisEsc()
         {
             List<Empleado_Escogidos> ListRegisEsc = ServicioCafeEscogido.GetAll();
@@ -304,7 +277,6 @@ namespace Presentacion
             else
             {
                 dataGridRegisEsc.Rows.Clear();
-
                 foreach (var Regis in ListRegisEsc)
                 {
 
@@ -325,8 +297,6 @@ namespace Presentacion
 
                     dataGridRegisEsc.Rows.Add(fila); //agregar las filas al datagriw
                 }
-
-
             }
         }
 
@@ -340,7 +310,6 @@ namespace Presentacion
         {
             if (string.IsNullOrEmpty(TxtId.Text) || (string.IsNullOrEmpty(TxtPnombre.Text)) || (string.IsNullOrEmpty(TxtPapellido.Text)))
             {
-
                 MessageBox.Show("N IDENTIFICACION, 1° NOMBRE Y 1° APELLIDO SON OBLIGATORIOS");
             }
             else
@@ -350,15 +319,12 @@ namespace Presentacion
                 {
                     TxtSnombre.Text = " ";
                 }
-
-                if (string.IsNullOrEmpty(TxtSapellido.Text))
-                {
-                    TxtSapellido.Text = " ";
+                else if (string.IsNullOrEmpty(TxtSapellido.Text)) 
+                { 
+                    TxtSapellido.Text = " "; 
                 }
-
                 try
                 {
-
                     Empleado empleado = new Empleado();
 
                     empleado.CC = TxtId.Text;
@@ -366,7 +332,7 @@ namespace Presentacion
                     empleado.name_2 = TxtSnombre.Text;
                     empleado.apellido_1 = TxtPapellido.Text;
                     empleado.apellido_2 = TxtSapellido.Text;
-                    empleado.edad = txtEdad.Text;
+                    //empleado.edad = txtEdad.Text;
                     empleado.FechaInicio = FechaEmpleado.Value;
 
                     string respuesta = ServicioEmpleados.Add(empleado);
@@ -380,8 +346,6 @@ namespace Presentacion
                 {
                     MessageBox.Show("ERROR DE REGISTRO DE EMPLEADO");
                 }
-
-
             }
         }
 
@@ -428,8 +392,6 @@ namespace Presentacion
 
                     dataGridEmpleado.Rows.Add(fila); //agregar las filas al datagriw
                 }
-
-
             }
         }
 
@@ -440,7 +402,7 @@ namespace Presentacion
             TxtSnombre.Clear();
             TxtPapellido.Clear();
             TxtSapellido.Clear();
-            txtEdad.Clear();
+            //txtEdad.Clear();
         }
 
         private void ManejoAdmin_Load(object sender, EventArgs e)

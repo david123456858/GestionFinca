@@ -43,10 +43,9 @@
             this.Access.FlatAppearance.BorderSize = 0;
             this.Access.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Access.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Access.Location = new System.Drawing.Point(205, 462);
-            this.Access.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Access.Location = new System.Drawing.Point(154, 375);
             this.Access.Name = "Access";
-            this.Access.Size = new System.Drawing.Size(167, 43);
+            this.Access.Size = new System.Drawing.Size(125, 35);
             this.Access.TabIndex = 2;
             this.Access.Text = "Acceder";
             this.Access.UseVisualStyleBackColor = false;
@@ -59,10 +58,9 @@
             this.Usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Usuario.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.Usuario.ForeColor = System.Drawing.Color.Black;
-            this.Usuario.Location = new System.Drawing.Point(115, 309);
-            this.Usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Usuario.Location = new System.Drawing.Point(86, 251);
             this.Usuario.Name = "Usuario";
-            this.Usuario.Size = new System.Drawing.Size(355, 25);
+            this.Usuario.Size = new System.Drawing.Size(266, 20);
             this.Usuario.TabIndex = 0;
             this.Usuario.Text = "Usuario";
             this.Usuario.Enter += new System.EventHandler(this.Usuario_Enter);
@@ -73,10 +71,9 @@
             this.Contraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.Contraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Contraseña.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.Contraseña.Location = new System.Drawing.Point(115, 400);
-            this.Contraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Contraseña.Location = new System.Drawing.Point(86, 325);
             this.Contraseña.Name = "Contraseña";
-            this.Contraseña.Size = new System.Drawing.Size(355, 25);
+            this.Contraseña.Size = new System.Drawing.Size(266, 20);
             this.Contraseña.TabIndex = 1;
             this.Contraseña.Text = "Contraseña";
             this.Contraseña.Enter += new System.EventHandler(this.Contraseña_Enter);
@@ -87,10 +84,9 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::Presentacion.Properties.Resources.cancel_close_delete_exit_logout_remove_x_icon_123217;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(884, 1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(663, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(47, 43);
+            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -100,21 +96,20 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::Presentacion.Properties.Resources.minussign_87504;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(825, 5);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(619, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(51, 31);
+            this.pictureBox2.Size = new System.Drawing.Size(38, 25);
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Presentacion.Properties.Resources.Login_de_la_aplicación_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(931, 671);
+            this.ClientSize = new System.Drawing.Size(698, 545);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Contraseña);
@@ -122,8 +117,8 @@
             this.Controls.Add(this.Access);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
