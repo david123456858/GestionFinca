@@ -358,7 +358,7 @@
             this.btnRegisEsCo.Location = new System.Drawing.Point(378, 309);
             this.btnRegisEsCo.Name = "btnRegisEsCo";
             this.btnRegisEsCo.Size = new System.Drawing.Size(120, 38);
-            this.btnRegisEsCo.TabIndex = 7;
+            this.btnRegisEsCo.TabIndex = 3;
             this.btnRegisEsCo.Text = "Registrar";
             this.btnRegisEsCo.UseVisualStyleBackColor = true;
             this.btnRegisEsCo.Click += new System.EventHandler(this.btnRegisEsCo_Click);
@@ -376,7 +376,7 @@
             this.TxtCC.Location = new System.Drawing.Point(232, 96);
             this.TxtCC.Name = "TxtCC";
             this.TxtCC.Size = new System.Drawing.Size(158, 27);
-            this.TxtCC.TabIndex = 5;
+            this.TxtCC.TabIndex = 0;
             // 
             // dataGridRegisEsc
             // 
@@ -427,7 +427,7 @@
             this.TxtCantEsco.Location = new System.Drawing.Point(417, 96);
             this.TxtCantEsco.Name = "TxtCantEsco";
             this.TxtCantEsco.Size = new System.Drawing.Size(158, 27);
-            this.TxtCantEsco.TabIndex = 3;
+            this.TxtCantEsco.TabIndex = 1;
             // 
             // FechaRegisEscogidos
             // 
@@ -486,7 +486,7 @@
             this.BtnEliminarEmp.Location = new System.Drawing.Point(780, 72);
             this.BtnEliminarEmp.Name = "BtnEliminarEmp";
             this.BtnEliminarEmp.Size = new System.Drawing.Size(120, 38);
-            this.BtnEliminarEmp.TabIndex = 17;
+            this.BtnEliminarEmp.TabIndex = 8;
             this.BtnEliminarEmp.Text = "Eliminar";
             this.BtnEliminarEmp.UseVisualStyleBackColor = true;
             // 
@@ -495,7 +495,7 @@
             this.BtnModificarEmp.Location = new System.Drawing.Point(658, 116);
             this.BtnModificarEmp.Name = "BtnModificarEmp";
             this.BtnModificarEmp.Size = new System.Drawing.Size(120, 38);
-            this.BtnModificarEmp.TabIndex = 16;
+            this.BtnModificarEmp.TabIndex = 7;
             this.BtnModificarEmp.Text = "Modificar";
             this.BtnModificarEmp.UseVisualStyleBackColor = true;
             // 
@@ -504,7 +504,7 @@
             this.btnRegistrarEmpleados.Location = new System.Drawing.Point(658, 31);
             this.btnRegistrarEmpleados.Name = "btnRegistrarEmpleados";
             this.btnRegistrarEmpleados.Size = new System.Drawing.Size(120, 38);
-            this.btnRegistrarEmpleados.TabIndex = 13;
+            this.btnRegistrarEmpleados.TabIndex = 6;
             this.btnRegistrarEmpleados.Text = "Registrar";
             this.btnRegistrarEmpleados.UseVisualStyleBackColor = true;
             this.btnRegistrarEmpleados.Click += new System.EventHandler(this.btnRegistrarEmpleados_Click);
@@ -578,42 +578,42 @@
             this.FechaEmpleado.Location = new System.Drawing.Point(456, 116);
             this.FechaEmpleado.Name = "FechaEmpleado";
             this.FechaEmpleado.Size = new System.Drawing.Size(154, 27);
-            this.FechaEmpleado.TabIndex = 11;
+            this.FechaEmpleado.TabIndex = 5;
             // 
             // TxtSapellido
             // 
             this.TxtSapellido.Location = new System.Drawing.Point(285, 116);
             this.TxtSapellido.Name = "TxtSapellido";
             this.TxtSapellido.Size = new System.Drawing.Size(154, 27);
-            this.TxtSapellido.TabIndex = 10;
+            this.TxtSapellido.TabIndex = 4;
             // 
             // TxtPapellido
             // 
             this.TxtPapellido.Location = new System.Drawing.Point(114, 116);
             this.TxtPapellido.Name = "TxtPapellido";
             this.TxtPapellido.Size = new System.Drawing.Size(154, 27);
-            this.TxtPapellido.TabIndex = 9;
+            this.TxtPapellido.TabIndex = 3;
             // 
             // TxtSnombre
             // 
             this.TxtSnombre.Location = new System.Drawing.Point(456, 42);
             this.TxtSnombre.Name = "TxtSnombre";
             this.TxtSnombre.Size = new System.Drawing.Size(154, 27);
-            this.TxtSnombre.TabIndex = 8;
+            this.TxtSnombre.TabIndex = 2;
             // 
             // TxtPnombre
             // 
             this.TxtPnombre.Location = new System.Drawing.Point(285, 42);
             this.TxtPnombre.Name = "TxtPnombre";
             this.TxtPnombre.Size = new System.Drawing.Size(154, 27);
-            this.TxtPnombre.TabIndex = 7;
+            this.TxtPnombre.TabIndex = 1;
             // 
             // TxtId
             // 
             this.TxtId.Location = new System.Drawing.Point(114, 42);
             this.TxtId.Name = "TxtId";
             this.TxtId.Size = new System.Drawing.Size(154, 27);
-            this.TxtId.TabIndex = 6;
+            this.TxtId.TabIndex = 0;
             // 
             // label17
             // 
@@ -691,10 +691,10 @@
             // 
             // BtnModificarCafe
             // 
-            this.BtnModificarCafe.Location = new System.Drawing.Point(373, 406);
+            this.BtnModificarCafe.Location = new System.Drawing.Point(526, 406);
             this.BtnModificarCafe.Name = "BtnModificarCafe";
             this.BtnModificarCafe.Size = new System.Drawing.Size(120, 38);
-            this.BtnModificarCafe.TabIndex = 9;
+            this.BtnModificarCafe.TabIndex = 4;
             this.BtnModificarCafe.Text = "Modificar";
             this.BtnModificarCafe.UseVisualStyleBackColor = true;
             // 
@@ -709,10 +709,10 @@
             // 
             // btnRegisCafe
             // 
-            this.btnRegisCafe.Location = new System.Drawing.Point(499, 406);
+            this.btnRegisCafe.Location = new System.Drawing.Point(392, 406);
             this.btnRegisCafe.Name = "btnRegisCafe";
             this.btnRegisCafe.Size = new System.Drawing.Size(120, 38);
-            this.btnRegisCafe.TabIndex = 7;
+            this.btnRegisCafe.TabIndex = 3;
             this.btnRegisCafe.Text = "Registrar";
             this.btnRegisCafe.UseVisualStyleBackColor = true;
             this.btnRegisCafe.Click += new System.EventHandler(this.btnRegisCafe_Click);
@@ -759,14 +759,14 @@
             this.TxtKilosS.Location = new System.Drawing.Point(410, 155);
             this.TxtKilosS.Name = "TxtKilosS";
             this.TxtKilosS.Size = new System.Drawing.Size(209, 27);
-            this.TxtKilosS.TabIndex = 4;
+            this.TxtKilosS.TabIndex = 1;
             // 
             // TxtKilosC
             // 
             this.TxtKilosC.Location = new System.Drawing.Point(169, 155);
             this.TxtKilosC.Name = "TxtKilosC";
             this.TxtKilosC.Size = new System.Drawing.Size(209, 27);
-            this.TxtKilosC.TabIndex = 3;
+            this.TxtKilosC.TabIndex = 0;
             // 
             // label3
             // 
@@ -800,7 +800,7 @@
             this.FechaK.Location = new System.Drawing.Point(633, 155);
             this.FechaK.Name = "FechaK";
             this.FechaK.Size = new System.Drawing.Size(209, 27);
-            this.FechaK.TabIndex = 5;
+            this.FechaK.TabIndex = 2;
             // 
             // pictureBox1
             // 
@@ -831,7 +831,7 @@
             this.button1.Location = new System.Drawing.Point(515, 309);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 38);
-            this.button1.TabIndex = 15;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Modificar";
             this.button1.UseVisualStyleBackColor = true;
             // 

@@ -226,7 +226,6 @@ namespace Presentacion
             }
         }
 
-
         void LimpiarCamposVentas()
         {
             TxtRef.Clear();
