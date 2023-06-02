@@ -9,8 +9,7 @@ namespace Logica
     public interface Iservice<T>
     {
         string Add(T entity);
-        string delete(T entity);
-        string Edit (T entity);
+        string Buscar(T entity);
         List<T> GetAll();
     }
 }

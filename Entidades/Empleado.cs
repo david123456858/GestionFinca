@@ -8,11 +8,8 @@ namespace Entidades
 {
     public class Empleado:Persona
     {
-        public DateTime FechaInicio { get; set; }
-
-        public override string ToString()
-        {
-            return string.Format(CC + ";" + name_1 + ";" + name_2 + ";" + apellido_1 + ";" + apellido_2 + ";" + edad + ";" + FechaInicio.ToShortDateString());
-        }
+        public string CC_ADMIN { get; set; }
+        //public DateTime FechaInicio { get; set; }
+        //public DateTime FechaFinal { get; set; }
     }
 }

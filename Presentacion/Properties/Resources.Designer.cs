@@ -63,6 +63,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _4115235_exit_logout_sign_out_114030 {
+            get {
+                object obj = ResourceManager.GetObject("4115235-exit-logout-sign-out_114030", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cancel_close_delete_exit_logout_remove_x_icon_123217 {
             get {
                 object obj = ResourceManager.GetObject("cancel_close_delete_exit_logout_remove_x_icon_123217", resourceCulture);
@@ -73,9 +83,59 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Login_de_la_aplicación_ {
+        internal static System.Drawing.Bitmap Log_In {
             get {
-                object obj = ResourceManager.GetObject("Login de la aplicación ", resourceCulture);
+                object obj = ResourceManager.GetObject("Log In", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Log_In__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Log In (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Log_In__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Log In (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Log_In__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Log In (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Log_In_V2_0 {
+            get {
+                object obj = ResourceManager.GetObject("Log In V2.0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Log_In1 {
+            get {
+                object obj = ResourceManager.GetObject("Log In1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,6 +153,36 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Login_de_la_aplicación_11 {
+            get {
+                object obj = ResourceManager.GetObject("Login de la aplicación 11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Login_de_la_aplicación_12 {
+            get {
+                object obj = ResourceManager.GetObject("Login de la aplicación 12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Login_de_la_aplicación_13 {
+            get {
+                object obj = ResourceManager.GetObject("Login de la aplicación 13", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minussign_87504 {
             get {
                 object obj = ResourceManager.GetObject("minussign_87504", resourceCulture);
@@ -103,9 +193,9 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap photo_2023_04_18_08_28_26 {
+        internal static System.Drawing.Bitmap Registrar_Cafes {
             get {
-                object obj = ResourceManager.GetObject("photo_2023-04-18_08-28-26", resourceCulture);
+                object obj = ResourceManager.GetObject("Registrar Cafes", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +203,19 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap We_are_open_Instagram_Post___Cafe_coffee_place_promotion {
+        internal static System.Drawing.Bitmap Sign_In {
             get {
-                object obj = ResourceManager.GetObject("We are open Instagram Post - Cafe coffee place promotion", resourceCulture);
+                object obj = ResourceManager.GetObject("Sign In", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sign_In__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Sign In (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

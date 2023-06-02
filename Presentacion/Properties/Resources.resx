@@ -118,22 +118,52 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cancel_close_delete_exit_logout_remove_x_icon_123217" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancel_close_delete_exit_logout_remove_x_icon_123217.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="minussign_87504" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minussign_87504.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Log In1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Log In1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Log In (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Log In (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Login de la aplicación 11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Login de la aplicación 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Log In (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Log In (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Log In (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Log In (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4115235-exit-logout-sign-out_114030" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4115235-exit-logout-sign-out_114030.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Login de la aplicación 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Login de la aplicación 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="photo_2023-04-18_08-28-26" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\photo_2023-04-18_08-28-26.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cancel_close_delete_exit_logout_remove_x_icon_123217" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancel_close_delete_exit_logout_remove_x_icon_123217.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Login de la aplicación " type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Login de la aplicación .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Login de la aplicación 13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Login de la aplicación 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="We are open Instagram Post - Cafe coffee place promotion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\We are open Instagram Post - Cafe coffee place promotion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Log In V2.0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Log In V2.0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="minussign_87504" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minussign_87504.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Log In" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Log In.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sign In" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sign In.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Login de la aplicación 12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Login de la aplicación 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sign In (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sign In (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Registrar Cafes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Registrar Cafes.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

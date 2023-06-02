@@ -1,6 +1,7 @@
 ﻿using Entidades;
 using System;
 using System.Collections.Generic;
+using Oracle.ManagedDataAccess.Client;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -8,63 +9,34 @@ using System.Threading.Tasks;
 
 namespace Datos
 {
-    public class RepositorioPedidos : Repositorio
+    public class RepositorioPedidos : Conexion
     {
-        public RepositorioPedidos():base()
-        {
-            Ruta = "Pedidos.txt";
-        }
-        public string Guardar(Pedidos pedido)
+        OracleCommand command;
+        OracleConnection connection;
+        Datos.Conexion conexion = new Datos.Conexion();
+        public string RegistrarPedido(Pedidos pedido)
         {
             try
             {
-                StreamWriter w = new StreamWriter(Ruta, true);
-                w.WriteLine(pedido.ToString());
-                w.Close();
-                return "Empleado Guardado Correctamente";
+                AbrirDB();
+                connection = miconexion();
+                command = new OracleCommand("insertar_pedido", connection);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                //lleva una secuencia 
+                command.Parameters.Add("P_cedula_empleado", OracleDbType.Varchar2).Value = pedido.CC_Empleado;
+                command.Parameters.Add("P_nombre", OracleDbType.Varchar2).Value = pedido.Nombre_pedido;
+                command.Parameters.Add("P_precio", OracleDbType.Decimal).Value = pedido.Precio;
+                command.Parameters.Add("p_cantidad", OracleDbType.Int32).Value = pedido.Precio;
+                command.Parameters.Add("p_total", OracleDbType.Decimal).Value = pedido.Total;
+                command.ExecuteNonQuery();
+                conexion.CerrarBd();
+                return "Pedido registrado";
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
-                return "No se Guardo";
+                return e.Message;
             }
         }
-        public List<Pedidos> GetAll()
-        {
-
-            List<Pedidos> pedidos = new List<Pedidos>();
-            StreamReader reader = new StreamReader(Ruta);
-            string FilePath = Ruta;
-            while (!reader.EndOfStream)
-            {
-                pedidos.Add(Mappear(reader.ReadLine()));
-            }
-            reader.Close();
-            return pedidos;
-        }
-       Pedidos Mappear(string lineadatos)
-        {
-            Pedidos pedidos = new Pedidos();
-            pedidos.Id_pedido= lineadatos.Split(';')[0];
-            pedidos.CC_Empleado = lineadatos.Split(';')[1];
-            pedidos.Nombre_pedido = lineadatos.Split(';')[2];
-            pedidos.costo = decimal.Parse(lineadatos.Split(';')[3]);
-            string f = pedidos.Fecha.ToString("dd/MM/yyyy");
-            f = lineadatos.Split(';')[4];
-           
-            return pedidos;
-        }
-
-        public string Actualizar(List<Pedidos> pedidos, bool modo)
-        {
-            StreamWriter writer = new StreamWriter(Ruta);
-            foreach (var item in pedidos)
-            {
-                writer.WriteLine(item.ToString());
-            }
-            writer.Close();
-            return "Se actualizo";
-        }
-
     }
 }

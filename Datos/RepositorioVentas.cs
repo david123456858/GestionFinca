@@ -1,80 +1,38 @@
 ﻿using Entidades;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics.Contracts;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Oracle.ManagedDataAccess.Client;
 
 namespace Datos
 {
-    public class RepositorioVentas : Repositorio
+    public class RepositorioVentas : Conexion
     {
-        public RepositorioVentas():base()
-        {
-            Ruta = "Ventas.txt";
-        }
-        public string Guardar(Registro_Ventas venta)
+        OracleCommand command;
+        OracleConnection connection;
+        Datos.Conexion conexion = new Datos.Conexion();
+        public string RegistrarVenta(Factura_Ventas ventas)
         {
             try
             {
-                StreamWriter w = new StreamWriter(Ruta, true);
-                w.WriteLine(venta.ToString());
-                w.Close();
-                return "Empleado Guardado Correctamente";
+                AbrirDB();
+                connection = miconexion();
+                command = new OracleCommand("insertar_venta", connection);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                //lleva una secuencia
+                
+                command.Parameters.Add("FV_cedula_admin", OracleDbType.Varchar2).Value = ventas.CC_ADMIN;
+                command.Parameters.Add("FV_factor", OracleDbType.Decimal).Value = ventas.Factor;
+                command.Parameters.Add("FV_kilos_neto", OracleDbType.Decimal).Value = ventas.Kilos_Netos;
+                command.Parameters.Add("FV_valor_kilo", OracleDbType.Decimal).Value = ventas.Valor_Kilos;
+                command.Parameters.Add("FV_valor_baseKilo", OracleDbType.Decimal).Value = ventas.Valor_BaseKilos;
+                command.ExecuteNonQuery();
+                conexion.CerrarBd();
+                return "Venta Registrada";
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
-                return "No se Guardo";
+                return e.Message;
+                
             }
-        }
-        public List<Registro_Ventas> GetAll()
-        {
-            StreamReader reader;
-            try
-            {
-                List<Registro_Ventas> ventas = new List<Registro_Ventas>();
-                 reader = new StreamReader(Ruta);
-                string FilePath = Ruta;
-                while (!reader.EndOfStream)
-                {
-                    ventas.Add(Mappear(reader.ReadLine()));
-                }
-                reader.Close();
-                return ventas;
-            }
-
-            catch (Exception)
-            {
-                return null;
-            }
-            finally { reader = null; }
-        }
-        Registro_Ventas Mappear(string lineadatos)
-        {
-            Registro_Ventas venta = new Registro_Ventas();
-            venta.Id_ventas = lineadatos.Split(';')[0];
-            venta.Kilos = float.Parse(lineadatos.Split(';')[1]);
-            venta.Valor_Kilo= float.Parse(lineadatos.Split(';')[2]);
-            venta.Factor = lineadatos.Split(';')[3];
-            venta.Fecha = DateTime.Parse(lineadatos.Split(';')[4]);
-            // string f = venta.Fecha.ToString("dd/MM/yyyy");
-            //f = lineadatos.Split(';')[4];
-            venta.Total = decimal.Parse(lineadatos.Split(';')[5]);
-            return venta;
-        }
-
-        public string Actualizar(List<Registro_Ventas> ventas, bool modo)
-        {
-            StreamWriter writer = new StreamWriter(Ruta);
-            foreach (var item in ventas)
-            {
-                writer.WriteLine(item.ToString());
-            }
-            writer.Close();
-            return "Se actualizo";
         }
 
     }

@@ -8,61 +8,26 @@ using System.Threading.Tasks;
 
 namespace Logica
 {
-    public class ICafe : Iservice<Registrado_Cafe>
+    public class ICafe : Iservice<Reg_Cafés>
     {
-        List<Registrado_Cafe> r;
-        RegistrarCafe repositorio = new RegistrarCafe();
+        RegistrarCafe registrado = new RegistrarCafe();
+        Conexion conexion = new Conexion();
+       
 
-        public ICafe()
+        public string Add(Reg_Cafés entity)
         {
-            Refresh();
-        }
-        public string Add(Registrado_Cafe entity)
-        {
-            
-
-            try
-            {
-                string Guardado = repositorio.Guardar(entity);
-                Refresh();
-                return Guardado;
-            }
-            catch (Exception)
-            {
-
-                return "No se pudo Guardar";
-            }
+            var estado = registrado.RegistradoCafe(entity);
+            return estado;
         }
 
-        public string delete(Registrado_Cafe entity)
-        {
-            try
-            {
-                r.Remove(entity);
-                repositorio.Actualizar(r, false);
-                return "se elimino";
-            }
-            catch (Exception e)
-            {
-
-                return e.Message;
-            }
-        }
-
-        public void Refresh()
-        {
-            r = repositorio.GetAll();
-        }
-
-        public string Edit(Registrado_Cafe entity)
+        public string Buscar(Reg_Cafés entity)
         {
             throw new NotImplementedException();
         }
 
-        public List<Registrado_Cafe> GetAll()
+        public List<Reg_Cafés> GetAll()
         {
-            Refresh();
-            return r;
+            throw new NotImplementedException();
         }
     }
 }

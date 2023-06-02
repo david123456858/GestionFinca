@@ -10,57 +10,23 @@ namespace Logica
 {
     public class IEmpleados : Iservice<Empleado>
     {
-        List<Empleado> r;
-        RepositorioEmpleados repositorio = new RepositorioEmpleados();
-        public IEmpleados()
-        {
-            Refresh();
-        }
+        RepositorioEmpleados repositorioEmpleados = new RepositorioEmpleados();
+        Conexion conexion = new Conexion();
+
         public string Add(Empleado entity)
         {
-            
-
-            try
-            {
-                string Guardado = repositorio.Guardar(entity);
-                Refresh();
-                return Guardado;
-            }
-            catch (Exception)
-            {
-
-                return "No se pudo Guardar";
-            }
+            var estado = repositorioEmpleados.RegistrarEmpleado(entity);
+            return estado;
         }
 
-        public string delete(Empleado entity)
-        {
-            try
-            {
-                r.Remove(entity);
-                repositorio.Actualizar(r, false);
-                return "se elimino";
-            }
-            catch (Exception e)
-            {
-
-                return e.Message;
-            }
-        }
-
-        public void Refresh()
-        {
-            r = repositorio.GetAll();
-        }
-        public string Edit(Empleado entity)
+        public string Buscar(Empleado entity)
         {
             throw new NotImplementedException();
         }
 
         public List<Empleado> GetAll()
         {
-            Refresh();
-            return r;
+            return repositorioEmpleados.GetAll();
         }
     }
 }

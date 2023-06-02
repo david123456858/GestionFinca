@@ -12,9 +12,6 @@ namespace Entidades
         public string Cc_empleado { get; set; }
         public DateTime FechaEscogido { get; set; }
         public float cantidad { get; set; }
-        public override string ToString()
-        {
-            return string.Format(Cc_empleado + ";"+FechaEscogido.ToShortDateString() + ";"+cantidad);
-        }
+        
     }
 }

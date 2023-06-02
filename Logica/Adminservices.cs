@@ -1,4 +1,5 @@
-﻿using Entidades;
+﻿using Datos;
+using Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,51 +8,41 @@ using System.Threading.Tasks;
 
 namespace Logica
 {
-    public class Adminservices : Iservice<Empleado>
+    public class Adminservices :Iservice<Admin>
     {
-        List<Empleado> lista = new List<Empleado>();
-        public Adminservices() {
-        
-  
-        }
-        public string AddCafe()
-        {
-            return ";";
+        RepositorioAdmin admi =  new RepositorioAdmin();
+        Conexion conexion = new Conexion();
 
-        }
-        public string AddEmpleado()
+        public string Add(Admin admin)
         {
-            return ";";
-
+            var estado = admi.RegistrarUser(admin);
+            return estado;
         }
-        public string DeletEmpleado()
-        {
-            return ";";
 
-        }
-        public string editEmpleado()
-        {
-            return ";";
 
-        }
-        public string Add(Empleado entity)
+
+        public string Buscar(Admin entity)
         {
             throw new NotImplementedException();
         }
 
-        public string delete(Empleado entity)
+        public List<Admin> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public string Edit(Empleado entity)
+        public string verificarUser(Admin admin)
         {
-            throw new NotImplementedException();
-        }
+            try
+            {
+                var estado = admi.VerficiarAdmins(admin);
+                return estado ;
+            }
+            catch (Exception e)
+            {
 
-        public List<Empleado> GetAll()
-        {
-            throw new NotImplementedException();
+                return e.Message;
+            }
         }
     }
 }

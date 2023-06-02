@@ -9,23 +9,12 @@ namespace Logica
 {
     public class INomina : Iservice<Nomina>
     {
-        List<Nomina> list;
-        
-        public INomina()
-        {
-
-        }
         public string Add(Nomina entity)
         {
             throw new NotImplementedException();
         }
 
-        public string delete(Nomina entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public string Edit(Nomina entity)
+        public string Buscar(Nomina entity)
         {
             throw new NotImplementedException();
         }

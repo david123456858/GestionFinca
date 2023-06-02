@@ -12,9 +12,5 @@ namespace Entidades
         public float Kilos_secos { get; set; }
         public DateTime Fecha { get; set; }
 
-        public override string ToString()
-        {
-            return string.Format(Kilos_cereza + ";"+Kilos_secos + ";"+Fecha);
-        }
     }
 }

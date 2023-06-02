@@ -46,11 +46,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminAccess.cs" />
-    <Compile Include="Login.cs">
+    <Compile Include="Factura_Venta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Factura_Venta.Designer.cs">
+      <DependentUpon>Factura_Venta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Log_in.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Log_in.Designer.cs">
+      <DependentUpon>Log_in.cs</DependentUpon>
     </Compile>
     <Compile Include="ManejoAdmin.cs">
       <SubType>Form</SubType>
@@ -58,12 +64,42 @@
     <Compile Include="ManejoAdmin.Designer.cs">
       <DependentUpon>ManejoAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manejo_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manejo_Empleados.Designer.cs">
+      <DependentUpon>Manejo_Empleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Registro_Cafe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro_Cafe.Designer.cs">
+      <DependentUpon>Registro_Cafe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registro_Escogidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro_Escogidos.Designer.cs">
+      <DependentUpon>Registro_Escogidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registro_Pedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro_Pedidos.Designer.cs">
+      <DependentUpon>Registro_Pedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sig_in.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sig_in.Designer.cs">
+      <DependentUpon>Sig_in.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -80,34 +116,74 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Factura_Venta.resx">
+      <DependentUpon>Factura_Venta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log_in.resx">
+      <DependentUpon>Log_in.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManejoAdmin.resx">
       <DependentUpon>ManejoAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Manejo_Empleados.resx">
+      <DependentUpon>Manejo_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\We are open Instagram Post - Cafe coffee place promotion.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\photo_2023-04-18_08-28-26.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Login de la aplicación .png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Login de la aplicación 1.png" />
+    <EmbeddedResource Include="Registro_Cafe.resx">
+      <DependentUpon>Registro_Cafe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registro_Escogidos.resx">
+      <DependentUpon>Registro_Escogidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registro_Pedidos.resx">
+      <DependentUpon>Registro_Pedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sig_in.resx">
+      <DependentUpon>Sig_in.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cancel_close_delete_exit_logout_remove_x_icon_123217.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\minussign_87504.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4115235-exit-logout-sign-out_114030.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login de la aplicación 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log In %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log In.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log In %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log In %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log In1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sign In.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sign In %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log In V2.0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Registrar Cafes.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

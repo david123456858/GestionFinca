@@ -8,11 +8,11 @@ namespace Entidades
 {
     public class Persona
     {
-        public string  CC { get; set; }
-        public string name_1 { get; set; }
-        public string name_2 { get; set; }
-        public string apellido_1 { get; set; }
-        public string apellido_2 { get; set; }
-        public string edad { get; set; }
+        public string  cedula { get; set; }
+        public string nombre { get; set; }
+        public string nombre2 { get; set; }
+        public string apellido { get; set; }
+        public string apellido2 { get; set; }
+       
     }
 }

@@ -46,6 +46,7 @@
     <Compile Include="ICafe_Escogido.cs" />
     <Compile Include="IEmpleados.cs" />
     <Compile Include="INomina.cs" />
+    <Compile Include="IPedidos.cs" />
     <Compile Include="Iservice.cs" />
     <Compile Include="IVentas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -59,6 +60,9 @@
       <Project>{e0a21a5f-eb57-40c0-b00d-76fa6eef0b29}</Project>
       <Name>Entidades</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

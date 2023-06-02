@@ -14,9 +14,6 @@ namespace Entidades
         public string Factor { get; set; }
         public DateTime Fecha { get; set; }
         public decimal Total { get; set; }
-        public override string ToString()
-        {
-            return string.Format(Id_ventas + ";"+Kilos + ";"+Valor_Kilo + ";"+Factor + ";"+Fecha.ToShortDateString() + ";"+Total);
-        }
+      
     }
 }

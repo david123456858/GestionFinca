@@ -1,73 +1,35 @@
 ﻿using Entidades;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Oracle.ManagedDataAccess.Client;
 
 namespace Datos
 {
-    public class RegistrarEscogidos : Repositorio
+    public class RegistrarEscogidos:Conexion
     {
-        public RegistrarEscogidos():base()
-        {
-            Ruta = "Cafe_Escogido.txt";
-        }
-        public string Guardar(Empleado_Escogidos cafe)
+        OracleCommand command;
+        OracleConnection connection;
+        Datos.Conexion conexion = new Datos.Conexion();
+        public string registrarES(Reg_Escogidos registro)
         {
             try
             {
-                StreamWriter w = new StreamWriter(Ruta, true);
-                w.WriteLine(cafe.ToString());
-                w.Close();
-                return "Empleado Guardado Correctamente";
+                AbrirDB();
+                connection = miconexion();
+                command = new OracleCommand("insertar_escogidos", connection);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Parameters.Add("RE_cedula_admin", OracleDbType.Varchar2).Value = registro.CC_ADMIN;
+                command.Parameters.Add("RE_cedula_empleado", OracleDbType.Varchar2).Value = registro.Cedula_Empleado;
+                command.Parameters.Add("RE_cantidad", OracleDbType.Decimal).Value = registro.cantidad;
+                command.Parameters.Add("RE_fecha", OracleDbType.Date).Value = registro.Fecha;
+                command.ExecuteNonQuery();
+                conexion.CerrarBd();
+                return "La cantidad ha sido guardado";
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
-                return "No se Guardo";
+                return e.Message;
             }
-        }
-        public List<Empleado_Escogidos> GetAll()
-        {
-            StreamReader reader;
-            try
-            {
-                List<Empleado_Escogidos> registros = new List<Empleado_Escogidos>();
-                 reader = new StreamReader(Ruta);
-                string FilePath = Ruta;
-                while (!reader.EndOfStream)
-                {
-                    registros.Add(Mappear(reader.ReadLine()));
-                }
-                reader.Close();
-                return registros;
-                
-            }
-            catch(Exception) { return null; }
-            finally { reader=null; }
-        }
-        Empleado_Escogidos Mappear(string lineadatos)
-        {
-            Empleado_Escogidos registrado = new Empleado_Escogidos();
-            registrado.Cc_empleado = lineadatos.Split(';')[0];
-            registrado.FechaEscogido = DateTime.Parse(lineadatos.Split(';')[1]);
-            //  string f = registrado.FechaEscogido.ToString("dd/MM/yyyy");
-            // f = lineadatos.Split(';')[1];
-            registrado.cantidad = float.Parse(lineadatos.Split(';')[2]);
-            return registrado;
-        }
-
-        public string Actualizar(List<Empleado_Escogidos> registrados, bool modo)
-        {
-            StreamWriter writer = new StreamWriter(Ruta);
-            foreach (var item in registrados)
-            {
-                writer.WriteLine(item.ToString());
-            }
-            writer.Close();
-            return "Se actualizo";
         }
     }
 }

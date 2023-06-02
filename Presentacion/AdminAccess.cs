@@ -8,7 +8,7 @@ namespace Presentacion
 {
     public class AdminAccess
     {
-        ManejoAdmin m = new ManejoAdmin();
+        Acceso_Admin m = new Acceso_Admin();
          public void ManejoAdmin()
         {
 
