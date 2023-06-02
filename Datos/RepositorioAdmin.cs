@@ -10,25 +10,6 @@ namespace Datos
     public class RepositorioAdmin:Repositorio
     {
         
-        public RepositorioAdmin()
-        {
-            Ruta = "Empleados.txt";
-        }
-        public void Add()
-        {
-
-        }
-        public List<Empleado> GetAll()
-        {
-            return new List<Empleado>();
-        }
-        public Empleado Mappear(string lienadatos)
-        {
-            Empleado m = new Empleado();
-            return m;
-        }
-        public void Update()
-        {
 
         }
     }
