@@ -17,7 +17,11 @@ namespace Logica
             var estado = registrar.registrarES(entity);
             return estado;
         }
-
+        public string Actualizar(Reg_Escogidos entity)
+        {
+            var estado= registrar.Acturalizar(entity);
+            return estado;
+        }
         public string Buscar(Reg_Escogidos entity)
         {
             throw new NotImplementedException();

@@ -52,6 +52,7 @@ namespace Presentacion
             cafe.Secos_Kilos = TxtKilosS.Text;
             var estado = icafe.Add(cafe);
             MessageBox.Show(estado.ToString());
+            LimpiarCamposCafe();
         }
 
         void VerDatosCafe()
@@ -81,6 +82,22 @@ namespace Presentacion
         {
             txtE_cedula_A2.Text = logInForm.Admint;
             VerDatosCafe();
+        }
+        void Actualiza()
+        {
+            Logica.ICafe icafe = new Logica.ICafe();
+            var cafe = new Reg_Cafés();
+
+            cafe.CC_ADMIN = txtE_cedula_A2.Text;
+            cafe.Cereza_Kilos = TxtKilosC.Text;
+            cafe.Secos_Kilos = TxtKilosS.Text;
+            var estado = icafe.Actualizar(cafe);
+            MessageBox.Show(estado.ToString());
+            LimpiarCamposCafe();
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Actualiza();
         }
     }
 }

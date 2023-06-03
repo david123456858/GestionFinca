@@ -80,11 +80,26 @@ namespace Presentacion
             TxtCantEsco.Clear();
             txtE_cedula_A3.Clear();
         }
-
+        void Actualizar()
+        {
+            var escogido = new Reg_Escogidos();
+            escogido.CC_ADMIN = txtE_cedula_A3.Text;
+            escogido.Cedula_Empleado = TxtCC.Text;
+            escogido.cantidad = decimal.Parse(TxtCantEsco.Text);
+            escogido.Fecha = DateTime.Parse(FechaRegisEscogidos.Text);
+            var estado = ServicioCafeEscogido.Actualizar(escogido);
+            MessageBox.Show(estado.ToString());
+            LimpiarRegisEscogidos();
+        }
         private void Registro_Escogidos_Load(object sender, EventArgs e)
         {
             txtE_cedula_A3.Text = logInForm.Admint;
             VerDatosRegisEsc();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Actualizar();
         }
     }
 }

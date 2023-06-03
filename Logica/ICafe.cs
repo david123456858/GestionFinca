@@ -13,7 +13,11 @@ namespace Logica
         RegistrarCafe registrado = new RegistrarCafe();
         Conexion conexion = new Conexion();
        
-
+        public string Actualizar(Reg_Cafés entity)
+        {
+            var estado = registrado.Actualizar(entity);
+            return estado;
+        }
         public string Add(Reg_Cafés entity)
         {
             var estado = registrado.RegistradoCafe(entity);

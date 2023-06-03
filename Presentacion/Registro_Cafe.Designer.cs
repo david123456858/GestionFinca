@@ -33,12 +33,12 @@
             this.TxtKilosC = new System.Windows.Forms.TextBox();
             this.TxtKilosS = new System.Windows.Forms.TextBox();
             this.dataGridCafe = new System.Windows.Forms.DataGridView();
-            this.btnregistrar_cafe = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.ColumNcafe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumSecos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumCerezas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumFechacafe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnregistrar_cafe = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCafe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,6 +96,30 @@
             this.dataGridCafe.Size = new System.Drawing.Size(585, 171);
             this.dataGridCafe.TabIndex = 7;
             // 
+            // ColumNcafe
+            // 
+            this.ColumNcafe.HeaderText = "N°Cafe ";
+            this.ColumNcafe.Name = "ColumNcafe";
+            this.ColumNcafe.Width = 60;
+            // 
+            // ColumSecos
+            // 
+            this.ColumSecos.HeaderText = "Secos Recolectados";
+            this.ColumSecos.Name = "ColumSecos";
+            this.ColumSecos.Width = 165;
+            // 
+            // ColumCerezas
+            // 
+            this.ColumCerezas.HeaderText = "Cerezas Recolectadas";
+            this.ColumCerezas.Name = "ColumCerezas";
+            this.ColumCerezas.Width = 165;
+            // 
+            // ColumFechacafe
+            // 
+            this.ColumFechacafe.HeaderText = "Fecha Registro ";
+            this.ColumFechacafe.Name = "ColumFechacafe";
+            this.ColumFechacafe.Width = 150;
+            // 
             // btnregistrar_cafe
             // 
             this.btnregistrar_cafe.BackColor = System.Drawing.Color.Transparent;
@@ -122,30 +146,7 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "Modificar";
             this.button2.UseVisualStyleBackColor = false;
-            // 
-            // ColumNcafe
-            // 
-            this.ColumNcafe.HeaderText = "N°Cafe ";
-            this.ColumNcafe.Name = "ColumNcafe";
-            this.ColumNcafe.Width = 60;
-            // 
-            // ColumSecos
-            // 
-            this.ColumSecos.HeaderText = "Secos Recolectados";
-            this.ColumSecos.Name = "ColumSecos";
-            this.ColumSecos.Width = 165;
-            // 
-            // ColumCerezas
-            // 
-            this.ColumCerezas.HeaderText = "Cerezas Recolectadas";
-            this.ColumCerezas.Name = "ColumCerezas";
-            this.ColumCerezas.Width = 165;
-            // 
-            // ColumFechacafe
-            // 
-            this.ColumFechacafe.HeaderText = "Fecha Registro ";
-            this.ColumFechacafe.Name = "ColumFechacafe";
-            this.ColumFechacafe.Width = 150;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Registro_Cafe
             // 
