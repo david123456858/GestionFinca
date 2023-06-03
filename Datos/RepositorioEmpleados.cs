@@ -2,6 +2,7 @@
 using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace Datos
 {
@@ -104,6 +105,49 @@ namespace Datos
 
             }
             return lista;
+        }
+        public string Eliminar(Empleado empleado)
+        {
+            try
+            {
+                AbrirDB();
+                connection = miconexion();
+                command = new OracleCommand("eliminar_empleado", connection);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Parameters.Add("E_cedula", OracleDbType.Varchar2).Value = empleado.cedula;
+                command.ExecuteNonQuery();
+                CerrarBd();
+                return "usuario Eliminado";
+            }
+            catch (Exception e)
+            {
+
+                return e.Message;
+            }
+        }
+        public string Modificar(Empleado empleado)
+        {
+            try
+            {
+                AbrirDB();
+                connection = miconexion();
+                command = new OracleCommand("modificar_empleado", connection);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Parameters.Add("E_cedula", OracleDbType.Varchar2).Value = empleado.cedula;
+                command.Parameters.Add("E_nombre", OracleDbType.Varchar2).Value = empleado.nombre;
+                command.Parameters.Add("E_nombre2", OracleDbType.Varchar2).Value = empleado.nombre2;
+                command.Parameters.Add("E_apellido", OracleDbType.Varchar2).Value = empleado.apellido;
+                command.Parameters.Add("E_apellido2", OracleDbType.Varchar2).Value = empleado.apellido2;
+                command.ExecuteNonQuery();
+                CerrarBd();
+                return "usuario actualizado";
+
+            }
+            catch (Exception e)
+            {
+
+                return e.Message;
+            }
         }
     }
 }

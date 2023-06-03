@@ -2,6 +2,7 @@
 using System;
 using Oracle.ManagedDataAccess.Client;
 using System.Collections.Generic;
+using Microsoft.Win32;
 
 namespace Datos
 {
@@ -64,6 +65,21 @@ namespace Datos
             escogidos.cantidad = decimal.Parse(linea.GetString(3));
             escogidos.Fecha = DateTime.Parse(linea.GetString(4));
             return escogidos;
+        }
+        public string Acturalizar(Reg_Escogidos reg)
+        {
+            AbrirDB();
+            connection = miconexion();
+            command = new OracleCommand("modificar_escogidos", connection);
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.Add("RE_id_escogido", OracleDbType.Varchar2).Value = reg.id_escogido;
+            command.Parameters.Add("RE_cedula_admin", OracleDbType.Varchar2).Value = reg.CC_ADMIN;
+            command.Parameters.Add("RE_cedula_empleado", OracleDbType.Varchar2).Value = reg.Cedula_Empleado;
+            command.Parameters.Add("RE_cantidad", OracleDbType.Decimal).Value = reg.cantidad;
+            command.Parameters.Add("RE_fecha", OracleDbType.Date).Value = reg.Fecha;
+            command.ExecuteNonQuery();
+            conexion.CerrarBd();
+            return "Se actualizo";
         }
     }
 }

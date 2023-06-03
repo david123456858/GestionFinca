@@ -12,7 +12,16 @@ namespace Logica
     {
         RepositorioEmpleados repositorioEmpleados = new RepositorioEmpleados();
         Conexion conexion = new Conexion();
-
+        public string actualizar(Empleado entity)
+        {
+            var respuesta = repositorioEmpleados.Modificar(entity);
+            return respuesta;
+        }
+        public string Eliminar(Empleado entity)
+        {
+            var respuesta = repositorioEmpleados.Eliminar(entity);
+            return respuesta;
+        }
         public string Add(Empleado entity)
         {
             var estado = repositorioEmpleados.RegistrarEmpleado(entity);

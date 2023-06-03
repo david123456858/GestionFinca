@@ -109,10 +109,41 @@ namespace Presentacion
            
 
         }
-
+        void Modificar()
+        {
+            Logica.IEmpleados empleados = new Logica.IEmpleados();
+            var empleado = new Empleado();
+            empleado.cedula = txtE_cedula.Text;
+            empleado.nombre = txtE_nombre.Text;
+            empleado.nombre2 = txtE_nombre2.Text;
+            empleado.apellido = txtE_apellido.Text;
+            empleado.apellido2 = txtE_apellido2.Text;
+            var estado = empleados.actualizar(empleado);
+            MessageBox.Show(estado.ToString());
+            LimpiarCampoEmpleados();
+        }
+        void Eliminar()
+        {
+            Logica.IEmpleados empleados = new  Logica.IEmpleados();
+            var empleado = new Empleado();
+            empleado.cedula = txtE_cedula.Text;
+            var estado = empleados.Eliminar(empleado);
+            MessageBox.Show(estado.ToString());
+            LimpiarCampoEmpleados();
+        }
         private void btnRegistrarEmpleados_Click_1(object sender, EventArgs e)
         {
             RegistroEmpleados();
+        }
+
+        private void BtnModificarEmp_Click(object sender, EventArgs e)
+        {
+            Modificar();
+        }
+
+        private void BtnEliminarEmp_Click(object sender, EventArgs e)
+        {
+            Eliminar();
         }
     }
 }

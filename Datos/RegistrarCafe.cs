@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Datos
 {
-    public class RegistrarCafe:Conexion
+    public class RegistrarCafe : Conexion
     {
         //lleva una secuencia 
         OracleCommand command;
@@ -66,6 +66,28 @@ namespace Datos
             cafe.Secos_Kilos = linea.GetString(3);
             cafe.Fecha = DateTime.Parse(linea.GetString(4));
             return cafe;
+        }
+        public string Actualizar(Reg_Cafés reg)
+        {
+            try
+            {
+                AbrirDB();
+                connection = miconexion();
+                command = new OracleCommand("modificar_regcafes", connection);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Parameters.Add("RC_id_rcafe", OracleDbType.Varchar2).Value = reg.id_cafe;
+                command.Parameters.Add("RC_cedula_admin", OracleDbType.Varchar2).Value = reg.CC_ADMIN;
+                command.Parameters.Add("RC_cereza_kilos", OracleDbType.Decimal).Value = reg.Cereza_Kilos;
+                command.Parameters.Add("RC_secos_kilos", OracleDbType.Decimal).Value = reg.Secos_Kilos;
+                command.ExecuteNonQuery();
+                conexion.CerrarBd();
+                return "Registro actualizado en la Base";
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }
