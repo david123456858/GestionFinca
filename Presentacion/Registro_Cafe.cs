@@ -15,6 +15,7 @@ namespace Presentacion
 {
     public partial class Registro_Cafe : Form
     {
+        public Log_in logInForm;
         public Registro_Cafe()
         {
             InitializeComponent();
@@ -55,7 +56,19 @@ namespace Presentacion
 
         void VerDatosCafe()
         {
+            var lista = ServiciosCafe.GetAll(txtE_cedula_A2.Text);
+            dataGridCafe.Rows.Clear();
 
+            foreach (var item in lista)
+            {
+                dataGridCafe.Rows.Add(new object[]
+                {
+                    item.id_cafe,
+                    item.Cereza_Kilos,
+                    item.Secos_Kilos,
+                    item.Fecha
+                });
+            }
         }
 
         void LimpiarCamposCafe()
@@ -66,6 +79,7 @@ namespace Presentacion
 
         private void Registro_Cafe_Load(object sender, EventArgs e)
         {
+            txtE_cedula_A2.Text = logInForm.Admint;
             VerDatosCafe();
         }
     }

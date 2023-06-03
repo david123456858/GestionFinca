@@ -28,51 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtE_cedula_A3 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.TxtCC = new System.Windows.Forms.TextBox();
             this.TxtCantEsco = new System.Windows.Forms.TextBox();
             this.FechaRegisEscogidos = new System.Windows.Forms.DateTimePicker();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.dataGridRegisEsc = new System.Windows.Forms.DataGridView();
+            this.c = new System.Windows.Forms.DataGridView();
             this.ColumNescogido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumFechaeSC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.btnRegisEsCo = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridRegisEsc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c)).BeginInit();
             this.SuspendLayout();
             // 
             // txtE_cedula_A3
             // 
-            this.txtE_cedula_A3.Location = new System.Drawing.Point(51, 90);
+            this.txtE_cedula_A3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtE_cedula_A3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtE_cedula_A3.Font = new System.Drawing.Font("Franklin Gothic Book", 12F);
+            this.txtE_cedula_A3.Location = new System.Drawing.Point(254, 101);
             this.txtE_cedula_A3.Name = "txtE_cedula_A3";
-            this.txtE_cedula_A3.Size = new System.Drawing.Size(154, 20);
+            this.txtE_cedula_A3.Size = new System.Drawing.Size(109, 19);
             this.txtE_cedula_A3.TabIndex = 25;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label5.Location = new System.Drawing.Point(47, 66);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(164, 21);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Cc del Jefe a cargo";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label19.Location = new System.Drawing.Point(244, 66);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(117, 21);
-            this.label19.TabIndex = 23;
-            this.label19.Text = "Cc Empleado";
             // 
             // label18
             // 
@@ -84,64 +64,60 @@
             // 
             // TxtCC
             // 
-            this.TxtCC.Location = new System.Drawing.Point(221, 90);
+            this.TxtCC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.TxtCC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtCC.Font = new System.Drawing.Font("Franklin Gothic Book", 12F);
+            this.TxtCC.Location = new System.Drawing.Point(251, 156);
             this.TxtCC.Name = "TxtCC";
-            this.TxtCC.Size = new System.Drawing.Size(158, 20);
+            this.TxtCC.Size = new System.Drawing.Size(114, 19);
             this.TxtCC.TabIndex = 17;
             // 
             // TxtCantEsco
             // 
-            this.TxtCantEsco.Location = new System.Drawing.Point(406, 90);
+            this.TxtCantEsco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.TxtCantEsco.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtCantEsco.Font = new System.Drawing.Font("Franklin Gothic Book", 12F);
+            this.TxtCantEsco.Location = new System.Drawing.Point(420, 100);
             this.TxtCantEsco.Name = "TxtCantEsco";
-            this.TxtCantEsco.Size = new System.Drawing.Size(158, 20);
+            this.TxtCantEsco.Size = new System.Drawing.Size(115, 19);
             this.TxtCantEsco.TabIndex = 19;
             // 
             // FechaRegisEscogidos
             // 
-            this.FechaRegisEscogidos.Location = new System.Drawing.Point(588, 90);
+            this.FechaRegisEscogidos.Font = new System.Drawing.Font("Franklin Gothic Book", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaRegisEscogidos.Location = new System.Drawing.Point(416, 155);
             this.FechaRegisEscogidos.Name = "FechaRegisEscogidos";
-            this.FechaRegisEscogidos.Size = new System.Drawing.Size(158, 20);
+            this.FechaRegisEscogidos.Size = new System.Drawing.Size(119, 25);
             this.FechaRegisEscogidos.TabIndex = 21;
             // 
-            // label11
+            // c
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label11.Location = new System.Drawing.Point(402, 66);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(162, 21);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "Cantidad Escogida";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label10.Location = new System.Drawing.Point(634, 66);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(59, 21);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Fecha";
-            // 
-            // dataGridRegisEsc
-            // 
-            this.dataGridRegisEsc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridRegisEsc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.c.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.c.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.c.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.c.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.c.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumNescogido,
             this.ColumCC,
             this.ColumCantidad,
             this.ColumFechaeSC});
-            this.dataGridRegisEsc.Location = new System.Drawing.Point(129, 150);
-            this.dataGridRegisEsc.Name = "dataGridRegisEsc";
-            this.dataGridRegisEsc.RowHeadersWidth = 51;
-            this.dataGridRegisEsc.Size = new System.Drawing.Size(553, 150);
-            this.dataGridRegisEsc.TabIndex = 26;
+            this.c.Location = new System.Drawing.Point(112, 258);
+            this.c.Name = "c";
+            this.c.RowHeadersWidth = 51;
+            this.c.Size = new System.Drawing.Size(578, 167);
+            this.c.TabIndex = 26;
             // 
             // ColumNescogido
             // 
             this.ColumNescogido.HeaderText = "N°Escogido";
             this.ColumNescogido.Name = "ColumNescogido";
-            this.ColumNescogido.Width = 80;
             // 
             // ColumCC
             // 
@@ -149,7 +125,7 @@
             this.ColumCC.MinimumWidth = 6;
             this.ColumCC.Name = "ColumCC";
             this.ColumCC.ReadOnly = true;
-            this.ColumCC.Width = 130;
+            this.ColumCC.Width = 135;
             // 
             // ColumCantidad
             // 
@@ -169,48 +145,53 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.button1.Location = new System.Drawing.Point(406, 334);
+            this.button1.Location = new System.Drawing.Point(429, 197);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 38);
+            this.button1.Size = new System.Drawing.Size(92, 35);
             this.button1.TabIndex = 28;
             this.button1.Text = "Modificar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // btnRegisEsCo
             // 
+            this.btnRegisEsCo.BackColor = System.Drawing.Color.Transparent;
+            this.btnRegisEsCo.FlatAppearance.BorderSize = 0;
+            this.btnRegisEsCo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegisEsCo.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.btnRegisEsCo.Location = new System.Drawing.Point(269, 334);
+            this.btnRegisEsCo.Location = new System.Drawing.Point(270, 199);
             this.btnRegisEsCo.Name = "btnRegisEsCo";
-            this.btnRegisEsCo.Size = new System.Drawing.Size(120, 38);
+            this.btnRegisEsCo.Size = new System.Drawing.Size(88, 32);
             this.btnRegisEsCo.TabIndex = 27;
             this.btnRegisEsCo.Text = "Registrar";
-            this.btnRegisEsCo.UseVisualStyleBackColor = true;
+            this.btnRegisEsCo.UseVisualStyleBackColor = false;
             this.btnRegisEsCo.Click += new System.EventHandler(this.btnRegisEsCo_Click);
             // 
             // Registro_Escogidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Presentacion.Properties.Resources.Registrar_Cafes__3_;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnRegisEsCo);
-            this.Controls.Add(this.dataGridRegisEsc);
+            this.Controls.Add(this.c);
             this.Controls.Add(this.txtE_cedula_A3);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.TxtCC);
             this.Controls.Add(this.TxtCantEsco);
             this.Controls.Add(this.FechaRegisEscogidos);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
+            this.DoubleBuffered = true;
             this.Name = "Registro_Escogidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro_Escogidos";
             this.Load += new System.EventHandler(this.Registro_Escogidos_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Registro_Escogidos_MouseDown);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridRegisEsc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,20 +200,16 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtE_cedula_A3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox TxtCC;
         private System.Windows.Forms.TextBox TxtCantEsco;
         private System.Windows.Forms.DateTimePicker FechaRegisEscogidos;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DataGridView dataGridRegisEsc;
+        private System.Windows.Forms.DataGridView c;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRegisEsCo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumNescogido;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumCC;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumFechaeSC;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnRegisEsCo;
     }
 }

@@ -8,7 +8,7 @@ namespace Entidades
 {
     public class Nomina
     {
-        
+        public string id_nomina { get; set; }
         public string CC_Empleado { get; set; }
         public string CC_ADMIN { get; set; }
         public string Nombre { get; set; }

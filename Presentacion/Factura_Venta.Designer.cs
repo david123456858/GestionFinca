@@ -28,81 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtRV_valor_B = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.txtRV_nombre_E = new System.Windows.Forms.TextBox();
             this.txtE_cedula_A4 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.btnRegistrarVentas = new System.Windows.Forms.Button();
             this.dataGridVenta = new System.Windows.Forms.DataGridView();
             this.ColumRef = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Columcafe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumTipocafe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumFactor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumKiloneto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumKilos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TxtFactor = new System.Windows.Forms.TextBox();
-            this.TxtValorxK = new System.Windows.Forms.TextBox();
-            this.TxtKilosL = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.txtRV_factor = new System.Windows.Forms.TextBox();
+            this.txtRV_valorXKilo = new System.Windows.Forms.TextBox();
+            this.txtRV_kiloneto = new System.Windows.Forms.TextBox();
+            this.txtRV_cafe = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtRV_tipocafe = new System.Windows.Forms.TextBox();
+            this.timepickerVenta = new System.Windows.Forms.DateTimePicker();
+            this.txtFVfacturaV = new System.Windows.Forms.TextBox();
+            this.busquedaVenta = new System.Windows.Forms.TextBox();
+            this.btncrearventa = new System.Windows.Forms.Button();
+            this.txtFV_ref_facturaV = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVenta)).BeginInit();
             this.SuspendLayout();
             // 
             // txtRV_valor_B
             // 
-            this.txtRV_valor_B.Location = new System.Drawing.Point(425, 89);
+            this.txtRV_valor_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtRV_valor_B.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRV_valor_B.Font = new System.Drawing.Font("Franklin Gothic Book", 12F);
+            this.txtRV_valor_B.Location = new System.Drawing.Point(622, 148);
             this.txtRV_valor_B.Name = "txtRV_valor_B";
-            this.txtRV_valor_B.Size = new System.Drawing.Size(154, 20);
+            this.txtRV_valor_B.Size = new System.Drawing.Size(131, 19);
             this.txtRV_valor_B.TabIndex = 38;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label22.Location = new System.Drawing.Point(436, 65);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(92, 21);
-            this.label22.TabIndex = 37;
-            this.label22.Text = "Valor base";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label21.Location = new System.Drawing.Point(67, 65);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(77, 21);
-            this.label21.TabIndex = 36;
-            this.label21.Text = "Empresa";
             // 
             // txtRV_nombre_E
             // 
-            this.txtRV_nombre_E.Location = new System.Drawing.Point(56, 89);
+            this.txtRV_nombre_E.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtRV_nombre_E.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRV_nombre_E.Font = new System.Drawing.Font("Franklin Gothic Book", 12F);
+            this.txtRV_nombre_E.Location = new System.Drawing.Point(267, 50);
             this.txtRV_nombre_E.Name = "txtRV_nombre_E";
-            this.txtRV_nombre_E.Size = new System.Drawing.Size(154, 20);
+            this.txtRV_nombre_E.Size = new System.Drawing.Size(131, 19);
             this.txtRV_nombre_E.TabIndex = 35;
             // 
             // txtE_cedula_A4
             // 
-            this.txtE_cedula_A4.Location = new System.Drawing.Point(56, 26);
+            this.txtE_cedula_A4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtE_cedula_A4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtE_cedula_A4.Font = new System.Drawing.Font("Franklin Gothic Book", 12F);
+            this.txtE_cedula_A4.Location = new System.Drawing.Point(442, 50);
             this.txtE_cedula_A4.Name = "txtE_cedula_A4";
-            this.txtE_cedula_A4.Size = new System.Drawing.Size(154, 20);
+            this.txtE_cedula_A4.Size = new System.Drawing.Size(131, 19);
             this.txtE_cedula_A4.TabIndex = 34;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label6.Location = new System.Drawing.Point(28, 2);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(164, 21);
-            this.label6.TabIndex = 33;
-            this.label6.Text = "Cc del Jefe a cargo";
             // 
             // label17
             // 
@@ -114,29 +100,55 @@
             // 
             // btnRegistrarVentas
             // 
+            this.btnRegistrarVentas.BackColor = System.Drawing.Color.Transparent;
+            this.btnRegistrarVentas.FlatAppearance.BorderSize = 0;
+            this.btnRegistrarVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarVentas.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.btnRegistrarVentas.Location = new System.Drawing.Point(616, 48);
+            this.btnRegistrarVentas.Location = new System.Drawing.Point(797, 158);
             this.btnRegistrarVentas.Name = "btnRegistrarVentas";
-            this.btnRegistrarVentas.Size = new System.Drawing.Size(120, 38);
+            this.btnRegistrarVentas.Size = new System.Drawing.Size(94, 29);
             this.btnRegistrarVentas.TabIndex = 29;
             this.btnRegistrarVentas.Text = "Registrar";
-            this.btnRegistrarVentas.UseVisualStyleBackColor = true;
+            this.btnRegistrarVentas.UseVisualStyleBackColor = false;
+            this.btnRegistrarVentas.Click += new System.EventHandler(this.btnRegistrarVentas_Click_1);
             // 
             // dataGridVenta
             // 
+            this.dataGridVenta.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridVenta.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridVenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumRef,
             this.Column1,
+            this.Columcafe,
+            this.ColumTipocafe,
             this.ColumFactor,
+            this.ColumKiloneto,
             this.ColumValor,
             this.ColumKilos,
             this.ColumTotal,
             this.ColumFecha});
-            this.dataGridVenta.Location = new System.Drawing.Point(12, 149);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Franklin Gothic Book", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridVenta.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridVenta.Location = new System.Drawing.Point(32, 250);
             this.dataGridVenta.Name = "dataGridVenta";
             this.dataGridVenta.RowHeadersWidth = 51;
-            this.dataGridVenta.Size = new System.Drawing.Size(773, 299);
+            this.dataGridVenta.Size = new System.Drawing.Size(850, 226);
             this.dataGridVenta.TabIndex = 31;
             // 
             // ColumRef
@@ -145,19 +157,38 @@
             this.ColumRef.MinimumWidth = 6;
             this.ColumRef.Name = "ColumRef";
             this.ColumRef.ReadOnly = true;
-            this.ColumRef.Width = 80;
+            this.ColumRef.Width = 60;
             // 
             // Column1
             // 
             this.Column1.HeaderText = " Empresa";
             this.Column1.Name = "Column1";
+            this.Column1.Width = 80;
+            // 
+            // Columcafe
+            // 
+            this.Columcafe.HeaderText = "Café";
+            this.Columcafe.Name = "Columcafe";
+            this.Columcafe.Width = 60;
+            // 
+            // ColumTipocafe
+            // 
+            this.ColumTipocafe.HeaderText = "Tipo Café";
+            this.ColumTipocafe.Name = "ColumTipocafe";
+            this.ColumTipocafe.Width = 80;
             // 
             // ColumFactor
             // 
             this.ColumFactor.HeaderText = "% Factor";
             this.ColumFactor.MinimumWidth = 6;
             this.ColumFactor.Name = "ColumFactor";
-            this.ColumFactor.Width = 110;
+            this.ColumFactor.Width = 80;
+            // 
+            // ColumKiloneto
+            // 
+            this.ColumKiloneto.HeaderText = "Valor Base Kilo";
+            this.ColumKiloneto.Name = "ColumKiloneto";
+            this.ColumKiloneto.Width = 110;
             // 
             // ColumValor
             // 
@@ -165,13 +196,15 @@
             this.ColumValor.MinimumWidth = 6;
             this.ColumValor.Name = "ColumValor";
             this.ColumValor.ReadOnly = true;
+            this.ColumValor.Width = 80;
             // 
             // ColumKilos
             // 
-            this.ColumKilos.HeaderText = "Kilos Totales";
+            this.ColumKilos.HeaderText = "Kilos Netos";
             this.ColumKilos.MinimumWidth = 6;
             this.ColumKilos.Name = "ColumKilos";
             this.ColumKilos.ReadOnly = true;
+            this.ColumKilos.Width = 85;
             // 
             // ColumTotal
             // 
@@ -182,83 +215,147 @@
             // 
             // ColumFecha
             // 
-            this.ColumFecha.HeaderText = "Fecha Registro";
+            this.ColumFecha.HeaderText = "Fecha ";
             this.ColumFecha.MinimumWidth = 6;
             this.ColumFecha.Name = "ColumFecha";
             this.ColumFecha.ReadOnly = true;
             this.ColumFecha.Width = 130;
             // 
-            // TxtFactor
+            // txtRV_factor
             // 
-            this.TxtFactor.Location = new System.Drawing.Point(239, 26);
-            this.TxtFactor.Name = "TxtFactor";
-            this.TxtFactor.Size = new System.Drawing.Size(154, 20);
-            this.TxtFactor.TabIndex = 27;
+            this.txtRV_factor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtRV_factor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRV_factor.Font = new System.Drawing.Font("Franklin Gothic Book", 12F);
+            this.txtRV_factor.Location = new System.Drawing.Point(103, 206);
+            this.txtRV_factor.Name = "txtRV_factor";
+            this.txtRV_factor.Size = new System.Drawing.Size(131, 19);
+            this.txtRV_factor.TabIndex = 27;
             // 
-            // TxtValorxK
+            // txtRV_valorXKilo
             // 
-            this.TxtValorxK.Location = new System.Drawing.Point(425, 26);
-            this.TxtValorxK.Name = "TxtValorxK";
-            this.TxtValorxK.Size = new System.Drawing.Size(154, 20);
-            this.TxtValorxK.TabIndex = 26;
+            this.txtRV_valorXKilo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtRV_valorXKilo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRV_valorXKilo.Font = new System.Drawing.Font("Franklin Gothic Book", 12F);
+            this.txtRV_valorXKilo.Location = new System.Drawing.Point(445, 148);
+            this.txtRV_valorXKilo.Name = "txtRV_valorXKilo";
+            this.txtRV_valorXKilo.Size = new System.Drawing.Size(131, 19);
+            this.txtRV_valorXKilo.TabIndex = 26;
             // 
-            // TxtKilosL
+            // txtRV_kiloneto
             // 
-            this.TxtKilosL.Location = new System.Drawing.Point(239, 89);
-            this.TxtKilosL.Name = "TxtKilosL";
-            this.TxtKilosL.Size = new System.Drawing.Size(154, 20);
-            this.TxtKilosL.TabIndex = 25;
+            this.txtRV_kiloneto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtRV_kiloneto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRV_kiloneto.Font = new System.Drawing.Font("Franklin Gothic Book", 12F);
+            this.txtRV_kiloneto.Location = new System.Drawing.Point(445, 204);
+            this.txtRV_kiloneto.Name = "txtRV_kiloneto";
+            this.txtRV_kiloneto.Size = new System.Drawing.Size(131, 19);
+            this.txtRV_kiloneto.TabIndex = 25;
             // 
-            // label9
+            // txtRV_cafe
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label9.Location = new System.Drawing.Point(413, 2);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(126, 21);
-            this.label9.TabIndex = 30;
-            this.label9.Text = "¿Valor por kilo?";
+            this.txtRV_cafe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtRV_cafe.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRV_cafe.Font = new System.Drawing.Font("Franklin Gothic Book", 12F);
+            this.txtRV_cafe.Location = new System.Drawing.Point(274, 148);
+            this.txtRV_cafe.Name = "txtRV_cafe";
+            this.txtRV_cafe.Size = new System.Drawing.Size(131, 19);
+            this.txtRV_cafe.TabIndex = 39;
             // 
-            // label8
+            // textBox2
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label8.Location = new System.Drawing.Point(199, 65);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(186, 21);
-            this.label8.TabIndex = 28;
-            this.label8.Text = "¿Cuantos kilos llevara?";
+            this.textBox2.Location = new System.Drawing.Point(-105, 95);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 40;
             // 
-            // label4
+            // txtRV_tipocafe
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label4.Location = new System.Drawing.Point(245, 2);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 21);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "¿% Factor?";
+            this.txtRV_tipocafe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtRV_tipocafe.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRV_tipocafe.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRV_tipocafe.Location = new System.Drawing.Point(274, 204);
+            this.txtRV_tipocafe.Name = "txtRV_tipocafe";
+            this.txtRV_tipocafe.Size = new System.Drawing.Size(131, 19);
+            this.txtRV_tipocafe.TabIndex = 41;
+            // 
+            // timepickerVenta
+            // 
+            this.timepickerVenta.Font = new System.Drawing.Font("Franklin Gothic Book", 12F);
+            this.timepickerVenta.Location = new System.Drawing.Point(606, 46);
+            this.timepickerVenta.Name = "timepickerVenta";
+            this.timepickerVenta.Size = new System.Drawing.Size(147, 26);
+            this.timepickerVenta.TabIndex = 42;
+            // 
+            // txtFVfacturaV
+            // 
+            this.txtFVfacturaV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtFVfacturaV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFVfacturaV.Font = new System.Drawing.Font("Franklin Gothic Book", 12F);
+            this.txtFVfacturaV.Location = new System.Drawing.Point(104, 51);
+            this.txtFVfacturaV.Name = "txtFVfacturaV";
+            this.txtFVfacturaV.Size = new System.Drawing.Size(131, 19);
+            this.txtFVfacturaV.TabIndex = 43;
+            // 
+            // busquedaVenta
+            // 
+            this.busquedaVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.busquedaVenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.busquedaVenta.Font = new System.Drawing.Font("Franklin Gothic Book", 12F);
+            this.busquedaVenta.Location = new System.Drawing.Point(615, 204);
+            this.busquedaVenta.Name = "busquedaVenta";
+            this.busquedaVenta.Size = new System.Drawing.Size(144, 19);
+            this.busquedaVenta.TabIndex = 44;
+            this.busquedaVenta.TextChanged += new System.EventHandler(this.busquedaVenta_TextChanged);
+            // 
+            // btncrearventa
+            // 
+            this.btncrearventa.BackColor = System.Drawing.Color.Transparent;
+            this.btncrearventa.FlatAppearance.BorderSize = 0;
+            this.btncrearventa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncrearventa.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btncrearventa.Location = new System.Drawing.Point(795, 37);
+            this.btncrearventa.Name = "btncrearventa";
+            this.btncrearventa.Size = new System.Drawing.Size(91, 26);
+            this.btncrearventa.TabIndex = 45;
+            this.btncrearventa.Text = "Crear";
+            this.btncrearventa.UseVisualStyleBackColor = false;
+            this.btncrearventa.Click += new System.EventHandler(this.btncrearventa_Click);
+            // 
+            // txtFV_ref_facturaV
+            // 
+            this.txtFV_ref_facturaV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtFV_ref_facturaV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFV_ref_facturaV.Font = new System.Drawing.Font("Franklin Gothic Book", 12F);
+            this.txtFV_ref_facturaV.Location = new System.Drawing.Point(104, 150);
+            this.txtFV_ref_facturaV.Name = "txtFV_ref_facturaV";
+            this.txtFV_ref_facturaV.Size = new System.Drawing.Size(131, 19);
+            this.txtFV_ref_facturaV.TabIndex = 46;
             // 
             // Factura_Venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(797, 450);
+            this.BackgroundImage = global::Presentacion.Properties.Resources.NOMINA2;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(917, 488);
+            this.Controls.Add(this.txtFV_ref_facturaV);
+            this.Controls.Add(this.btncrearventa);
+            this.Controls.Add(this.busquedaVenta);
+            this.Controls.Add(this.txtFVfacturaV);
+            this.Controls.Add(this.timepickerVenta);
+            this.Controls.Add(this.txtRV_tipocafe);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtRV_cafe);
             this.Controls.Add(this.txtRV_valor_B);
-            this.Controls.Add(this.label22);
-            this.Controls.Add(this.label21);
             this.Controls.Add(this.txtRV_nombre_E);
             this.Controls.Add(this.txtE_cedula_A4);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.btnRegistrarVentas);
             this.Controls.Add(this.dataGridVenta);
-            this.Controls.Add(this.TxtFactor);
-            this.Controls.Add(this.TxtValorxK);
-            this.Controls.Add(this.TxtKilosL);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtRV_factor);
+            this.Controls.Add(this.txtRV_valorXKilo);
+            this.Controls.Add(this.txtRV_kiloneto);
+            this.DoubleBuffered = true;
             this.Name = "Factura_Venta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Factura_Venta";
@@ -273,26 +370,31 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtRV_valor_B;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtRV_nombre_E;
         private System.Windows.Forms.TextBox txtE_cedula_A4;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btnRegistrarVentas;
         private System.Windows.Forms.DataGridView dataGridVenta;
-        private System.Windows.Forms.TextBox TxtFactor;
-        private System.Windows.Forms.TextBox TxtValorxK;
-        private System.Windows.Forms.TextBox TxtKilosL;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtRV_factor;
+        private System.Windows.Forms.TextBox txtRV_valorXKilo;
+        private System.Windows.Forms.TextBox txtRV_kiloneto;
+        private System.Windows.Forms.TextBox txtRV_cafe;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtRV_tipocafe;
+        private System.Windows.Forms.DateTimePicker timepickerVenta;
+        private System.Windows.Forms.TextBox txtFVfacturaV;
+        private System.Windows.Forms.TextBox busquedaVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumRef;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Columcafe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumTipocafe;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumFactor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumKiloneto;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumValor;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumKilos;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumFecha;
+        private System.Windows.Forms.Button btncrearventa;
+        private System.Windows.Forms.TextBox txtFV_ref_facturaV;
     }
 }

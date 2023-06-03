@@ -1,6 +1,7 @@
 ﻿using Entidades;
 using System;
 using Oracle.ManagedDataAccess.Client;
+using System.Collections.Generic;
 
 namespace Datos
 {
@@ -32,6 +33,39 @@ namespace Datos
 
                 return e.Message;
             }
+        }
+        public List<Reg_Cafés> GetAll(string admin)
+        {
+            try
+            {
+                List<Reg_Cafés> lista = new List<Reg_Cafés>();
+                AbrirDB();
+                connection = miconexion();
+                command = new OracleCommand("SELECT * FROM regcafes WHERE CEDULA_ADMIN =:admin", connection);
+                command.Parameters.Add(":admin", admin);
+                var raid = command.ExecuteReader();
+                while (raid.Read())
+                {
+                    lista.Add(Mappear(raid));
+                }
+                CerrarBd();
+                return lista;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public Reg_Cafés Mappear(OracleDataReader linea)
+        {
+            var cafe = new Reg_Cafés();
+            cafe.id_cafe = linea.GetString(0);
+            cafe.CC_ADMIN = linea.GetString(1);
+            cafe.Cereza_Kilos = linea.GetString(2);
+            cafe.Secos_Kilos = linea.GetString(3);
+            cafe.Fecha = DateTime.Parse(linea.GetString(4));
+            return cafe;
         }
     }
 }

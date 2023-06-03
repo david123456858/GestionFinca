@@ -35,18 +35,18 @@
             this.BtnModificarEmp = new System.Windows.Forms.Button();
             this.btnRegistrarEmpleados = new System.Windows.Forms.Button();
             this.dataGridEmpleado = new System.Windows.Forms.DataGridView();
-            this.txtE_apellido2 = new System.Windows.Forms.TextBox();
-            this.txtE_apellido = new System.Windows.Forms.TextBox();
-            this.txtE_nombre2 = new System.Windows.Forms.TextBox();
-            this.txtE_nombre = new System.Windows.Forms.TextBox();
-            this.txtE_cedula = new System.Windows.Forms.TextBox();
-            this.txtbusquedaE = new System.Windows.Forms.TextBox();
             this.ColumID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumSn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumPA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumSA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtE_apellido2 = new System.Windows.Forms.TextBox();
+            this.txtE_apellido = new System.Windows.Forms.TextBox();
+            this.txtE_nombre2 = new System.Windows.Forms.TextBox();
+            this.txtE_nombre = new System.Windows.Forms.TextBox();
+            this.txtE_cedula = new System.Windows.Forms.TextBox();
+            this.txtbusquedaE = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEmpleado)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,8 +65,8 @@
             this.BtnEliminarEmp.BackColor = System.Drawing.Color.Transparent;
             this.BtnEliminarEmp.FlatAppearance.BorderSize = 0;
             this.BtnEliminarEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEliminarEmp.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F);
-            this.BtnEliminarEmp.Location = new System.Drawing.Point(404, 191);
+            this.BtnEliminarEmp.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.BtnEliminarEmp.Location = new System.Drawing.Point(405, 190);
             this.BtnEliminarEmp.Name = "BtnEliminarEmp";
             this.BtnEliminarEmp.Size = new System.Drawing.Size(88, 25);
             this.BtnEliminarEmp.TabIndex = 27;
@@ -78,10 +78,10 @@
             this.BtnModificarEmp.BackColor = System.Drawing.Color.Transparent;
             this.BtnModificarEmp.FlatAppearance.BorderSize = 0;
             this.BtnModificarEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnModificarEmp.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F);
-            this.BtnModificarEmp.Location = new System.Drawing.Point(246, 191);
+            this.BtnModificarEmp.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.BtnModificarEmp.Location = new System.Drawing.Point(244, 190);
             this.BtnModificarEmp.Name = "BtnModificarEmp";
-            this.BtnModificarEmp.Size = new System.Drawing.Size(88, 25);
+            this.BtnModificarEmp.Size = new System.Drawing.Size(93, 25);
             this.BtnModificarEmp.TabIndex = 26;
             this.BtnModificarEmp.Text = "Modificar";
             this.BtnModificarEmp.UseVisualStyleBackColor = false;
@@ -91,16 +91,19 @@
             this.btnRegistrarEmpleados.BackColor = System.Drawing.Color.Transparent;
             this.btnRegistrarEmpleados.FlatAppearance.BorderSize = 0;
             this.btnRegistrarEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarEmpleados.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarEmpleados.Location = new System.Drawing.Point(69, 191);
+            this.btnRegistrarEmpleados.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnRegistrarEmpleados.Location = new System.Drawing.Point(68, 188);
             this.btnRegistrarEmpleados.Name = "btnRegistrarEmpleados";
-            this.btnRegistrarEmpleados.Size = new System.Drawing.Size(88, 25);
+            this.btnRegistrarEmpleados.Size = new System.Drawing.Size(88, 31);
             this.btnRegistrarEmpleados.TabIndex = 25;
             this.btnRegistrarEmpleados.Text = "Registrar";
             this.btnRegistrarEmpleados.UseVisualStyleBackColor = false;
+            this.btnRegistrarEmpleados.Click += new System.EventHandler(this.btnRegistrarEmpleados_Click_1);
             // 
             // dataGridEmpleado
             // 
+            this.dataGridEmpleado.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 12F);
@@ -130,6 +133,50 @@
             this.dataGridEmpleado.RowHeadersWidth = 51;
             this.dataGridEmpleado.Size = new System.Drawing.Size(793, 234);
             this.dataGridEmpleado.TabIndex = 28;
+            // 
+            // ColumID
+            // 
+            this.ColumID.HeaderText = "Cedula";
+            this.ColumID.MinimumWidth = 6;
+            this.ColumID.Name = "ColumID";
+            this.ColumID.ReadOnly = true;
+            this.ColumID.Width = 120;
+            // 
+            // ColumPN
+            // 
+            this.ColumPN.HeaderText = "Nombre";
+            this.ColumPN.MinimumWidth = 6;
+            this.ColumPN.Name = "ColumPN";
+            this.ColumPN.ReadOnly = true;
+            // 
+            // ColumSn
+            // 
+            this.ColumSn.HeaderText = "Segundo Nombre";
+            this.ColumSn.MinimumWidth = 6;
+            this.ColumSn.Name = "ColumSn";
+            this.ColumSn.ReadOnly = true;
+            this.ColumSn.Width = 140;
+            // 
+            // ColumPA
+            // 
+            this.ColumPA.HeaderText = "Apellido";
+            this.ColumPA.MinimumWidth = 6;
+            this.ColumPA.Name = "ColumPA";
+            this.ColumPA.ReadOnly = true;
+            // 
+            // ColumSA
+            // 
+            this.ColumSA.HeaderText = "Segundo Apellido";
+            this.ColumSA.MinimumWidth = 6;
+            this.ColumSA.Name = "ColumSA";
+            this.ColumSA.ReadOnly = true;
+            this.ColumSA.Width = 150;
+            // 
+            // ColumnFecha
+            // 
+            this.ColumnFecha.HeaderText = "Fecha Inicio";
+            this.ColumnFecha.Name = "ColumnFecha";
+            this.ColumnFecha.Width = 130;
             // 
             // txtE_apellido2
             // 
@@ -190,50 +237,7 @@
             this.txtbusquedaE.Name = "txtbusquedaE";
             this.txtbusquedaE.Size = new System.Drawing.Size(145, 19);
             this.txtbusquedaE.TabIndex = 31;
-            // 
-            // ColumID
-            // 
-            this.ColumID.HeaderText = "Cedula";
-            this.ColumID.MinimumWidth = 6;
-            this.ColumID.Name = "ColumID";
-            this.ColumID.ReadOnly = true;
-            this.ColumID.Width = 120;
-            // 
-            // ColumPN
-            // 
-            this.ColumPN.HeaderText = "Nombre";
-            this.ColumPN.MinimumWidth = 6;
-            this.ColumPN.Name = "ColumPN";
-            this.ColumPN.ReadOnly = true;
-            // 
-            // ColumSn
-            // 
-            this.ColumSn.HeaderText = "Segundo Nombre";
-            this.ColumSn.MinimumWidth = 6;
-            this.ColumSn.Name = "ColumSn";
-            this.ColumSn.ReadOnly = true;
-            this.ColumSn.Width = 140;
-            // 
-            // ColumPA
-            // 
-            this.ColumPA.HeaderText = "Apellido";
-            this.ColumPA.MinimumWidth = 6;
-            this.ColumPA.Name = "ColumPA";
-            this.ColumPA.ReadOnly = true;
-            // 
-            // ColumSA
-            // 
-            this.ColumSA.HeaderText = "Segundo Apellido";
-            this.ColumSA.MinimumWidth = 6;
-            this.ColumSA.Name = "ColumSA";
-            this.ColumSA.ReadOnly = true;
-            this.ColumSA.Width = 150;
-            // 
-            // ColumnFecha
-            // 
-            this.ColumnFecha.HeaderText = "Fecha Inicio";
-            this.ColumnFecha.Name = "ColumnFecha";
-            this.ColumnFecha.Width = 130;
+            this.txtbusquedaE.TextChanged += new System.EventHandler(this.txtbusquedaE_TextChanged);
             // 
             // Manejo_Empleados
             // 
@@ -255,7 +259,6 @@
             this.Controls.Add(this.txtE_nombre);
             this.Controls.Add(this.txtE_cedula);
             this.Name = "Manejo_Empleados";
-            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manejo_Empleados";
             this.Load += new System.EventHandler(this.Manejo_Empleados_Load);

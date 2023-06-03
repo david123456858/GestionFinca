@@ -80,7 +80,6 @@ namespace Presentacion
         void acceder()
         {
             var admins = new Admin();
-            var Admin = new Acceso_Admin();
             admins.cedula = Usuario.Text;
             Admint = admins.cedula;
             admins.contraseña = Contraseña.Text;
@@ -89,6 +88,7 @@ namespace Presentacion
             var  respuestas =  admin.verificarUser(admins);
             if (respuestas == "200")
             {
+               
                 Acceso_Admin manejoAdminForm = new Acceso_Admin();
                 manejoAdminForm.logInForm = this;
                 manejoAdminForm.Show();

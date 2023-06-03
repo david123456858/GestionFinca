@@ -26,7 +26,7 @@ namespace Logica
             throw new NotImplementedException();
         }
 
-        public List<Admin> GetAll()
+        public List<Admin> GetAll(string admin)
         {
             throw new NotImplementedException();
         }

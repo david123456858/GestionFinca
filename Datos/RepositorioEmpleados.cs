@@ -33,6 +33,43 @@ namespace Datos
                 return e.Message;
             }
         }
+        public List<Empleado> GetAll(string admin)
+        {
+            try
+            {
+                List<Empleado> lista = new List<Empleado>();
+                AbrirDB();
+                connection = miconexion();
+                command = new OracleCommand("SELECT * FROM EMPLEADOS WHERE CEDULA_ADMIN =:admin", connection);
+                command.Parameters.Add(":admin", admin);
+                var raid = command.ExecuteReader();
+                while (raid.Read())
+                {
+                    lista.Add(Mappear(raid));
+                }
+                CerrarBd();
+                return lista;
+            }
+            catch (Exception )
+            {
+
+                return null;
+            }
+
+        }
+
+        public Empleado Mappear(OracleDataReader linea)
+        {
+            var empleado = new Empleado();
+            empleado.cedula = linea.GetString(1);
+            empleado.nombre = linea.GetString(2);
+            empleado.nombre2 = linea.GetString(3);
+            empleado.apellido = linea.GetString(4);
+            empleado.apellido2 = linea.GetString(5);
+            empleado.CC_ADMIN = linea.GetString(0);
+            empleado.FechaInicio = DateTime.Parse(linea.GetString(6));
+            return empleado;
+        }
         public List<Empleado> GetAll()
         {
             try
@@ -49,23 +86,24 @@ namespace Datos
                 CerrarBd();
                 return lista;
             }
-            catch (Exception )
+            catch (Exception)
             {
 
                 return null;
             }
-
         }
-        public Empleado Mappear(OracleDataReader linea)
+        public List<Empleado> BuscarPorTodo(string algo)
         {
-            var empleado = new Empleado();
-            empleado.cedula = linea.GetString(0);
-            empleado.nombre = linea.GetString(1);
-            empleado.nombre2 = linea.GetString(2);
-            empleado.apellido = linea.GetString(3);
-            empleado.apellido2 = linea.GetString(4);
-            empleado.CC_ADMIN = linea.GetString(5);
-            return empleado;
+            var lista = new List<Empleado>();
+            foreach (var item in GetAll())
+            {
+                if (item.cedula.StartsWith(algo) || item.nombre.StartsWith(algo) || item.apellido.StartsWith(algo))
+                {
+                    lista.Add(item);
+                }
+
+            }
+            return lista;
         }
     }
 }

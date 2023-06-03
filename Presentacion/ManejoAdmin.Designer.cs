@@ -36,12 +36,7 @@
             this.btn_regCaf = new System.Windows.Forms.Button();
             this.btn_regFac = new System.Windows.Forms.Button();
             this.btn_regEsc = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.btnNomina = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -72,121 +67,96 @@
             // 
             // btn_regEmp
             // 
+            this.btn_regEmp.BackColor = System.Drawing.Color.Transparent;
+            this.btn_regEmp.FlatAppearance.BorderSize = 0;
+            this.btn_regEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_regEmp.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.btn_regEmp.Location = new System.Drawing.Point(63, 208);
+            this.btn_regEmp.Location = new System.Drawing.Point(183, 173);
             this.btn_regEmp.Name = "btn_regEmp";
             this.btn_regEmp.Size = new System.Drawing.Size(183, 32);
             this.btn_regEmp.TabIndex = 3;
             this.btn_regEmp.Text = "Registrar_Empleado";
-            this.btn_regEmp.UseVisualStyleBackColor = true;
+            this.btn_regEmp.UseVisualStyleBackColor = false;
             this.btn_regEmp.Click += new System.EventHandler(this.btn_regEmp_Click);
             // 
             // btn_regPed
             // 
+            this.btn_regPed.BackColor = System.Drawing.Color.Transparent;
+            this.btn_regPed.FlatAppearance.BorderSize = 0;
+            this.btn_regPed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_regPed.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.btn_regPed.Location = new System.Drawing.Point(63, 279);
+            this.btn_regPed.Location = new System.Drawing.Point(192, 219);
             this.btn_regPed.Name = "btn_regPed";
-            this.btn_regPed.Size = new System.Drawing.Size(183, 32);
+            this.btn_regPed.Size = new System.Drawing.Size(164, 32);
             this.btn_regPed.TabIndex = 4;
             this.btn_regPed.Text = "Registrar_Pedido";
-            this.btn_regPed.UseVisualStyleBackColor = true;
+            this.btn_regPed.UseVisualStyleBackColor = false;
             this.btn_regPed.Click += new System.EventHandler(this.btn_regPed_Click);
             // 
             // btn_regCaf
             // 
+            this.btn_regCaf.BackColor = System.Drawing.Color.Transparent;
+            this.btn_regCaf.FlatAppearance.BorderSize = 0;
+            this.btn_regCaf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_regCaf.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.btn_regCaf.Location = new System.Drawing.Point(438, 208);
+            this.btn_regCaf.Location = new System.Drawing.Point(192, 315);
             this.btn_regCaf.Name = "btn_regCaf";
-            this.btn_regCaf.Size = new System.Drawing.Size(183, 32);
+            this.btn_regCaf.Size = new System.Drawing.Size(164, 32);
             this.btn_regCaf.TabIndex = 5;
             this.btn_regCaf.Text = "Registrar_Cafe";
-            this.btn_regCaf.UseVisualStyleBackColor = true;
+            this.btn_regCaf.UseVisualStyleBackColor = false;
             this.btn_regCaf.Click += new System.EventHandler(this.btn_regCaf_Click);
             // 
             // btn_regFac
             // 
+            this.btn_regFac.BackColor = System.Drawing.Color.Transparent;
+            this.btn_regFac.FlatAppearance.BorderSize = 0;
+            this.btn_regFac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_regFac.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.btn_regFac.Location = new System.Drawing.Point(254, 366);
+            this.btn_regFac.Location = new System.Drawing.Point(192, 266);
             this.btn_regFac.Name = "btn_regFac";
-            this.btn_regFac.Size = new System.Drawing.Size(183, 32);
+            this.btn_regFac.Size = new System.Drawing.Size(164, 32);
             this.btn_regFac.TabIndex = 6;
             this.btn_regFac.Text = "Registrar_Factura";
-            this.btn_regFac.UseVisualStyleBackColor = true;
+            this.btn_regFac.UseVisualStyleBackColor = false;
             this.btn_regFac.Click += new System.EventHandler(this.btn_regFac_Click);
             // 
             // btn_regEsc
             // 
+            this.btn_regEsc.BackColor = System.Drawing.Color.Transparent;
+            this.btn_regEsc.FlatAppearance.BorderSize = 0;
+            this.btn_regEsc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_regEsc.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.btn_regEsc.Location = new System.Drawing.Point(438, 279);
+            this.btn_regEsc.Location = new System.Drawing.Point(192, 362);
             this.btn_regEsc.Name = "btn_regEsc";
-            this.btn_regEsc.Size = new System.Drawing.Size(183, 32);
+            this.btn_regEsc.Size = new System.Drawing.Size(164, 32);
             this.btn_regEsc.TabIndex = 7;
             this.btn_regEsc.Text = "Registrar_Escogido";
-            this.btn_regEsc.UseVisualStyleBackColor = true;
+            this.btn_regEsc.UseVisualStyleBackColor = false;
             this.btn_regEsc.Click += new System.EventHandler(this.btn_regEsc_Click);
             // 
-            // label1
+            // btnNomina
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
-            this.label1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label1.Location = new System.Drawing.Point(173, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 21);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Nombre";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(423, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 21);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Apellido";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(264, 78);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 21);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Identificacion ";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(146, 72);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 27);
-            this.textBox1.TabIndex = 11;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(268, 102);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 27);
-            this.textBox2.TabIndex = 12;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(427, 72);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 27);
-            this.textBox3.TabIndex = 13;
+            this.btnNomina.BackColor = System.Drawing.Color.Transparent;
+            this.btnNomina.FlatAppearance.BorderSize = 0;
+            this.btnNomina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNomina.Location = new System.Drawing.Point(200, 409);
+            this.btnNomina.Name = "btnNomina";
+            this.btnNomina.Size = new System.Drawing.Size(144, 32);
+            this.btnNomina.TabIndex = 8;
+            this.btnNomina.Text = "Nomina";
+            this.btnNomina.UseVisualStyleBackColor = false;
+            this.btnNomina.Click += new System.EventHandler(this.btnNomina_Click);
             // 
             // Acceso_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(702, 459);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.BackgroundImage = global::Presentacion.Properties.Resources.Sign_In1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(542, 500);
+            this.Controls.Add(this.btnNomina);
             this.Controls.Add(this.btn_regEsc);
             this.Controls.Add(this.btn_regFac);
             this.Controls.Add(this.btn_regCaf);
@@ -194,6 +164,7 @@
             this.Controls.Add(this.btn_regEmp);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.ForeColor = System.Drawing.SystemColors.WindowText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -206,7 +177,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -218,11 +188,6 @@
         private System.Windows.Forms.Button btn_regCaf;
         private System.Windows.Forms.Button btn_regFac;
         private System.Windows.Forms.Button btn_regEsc;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button btnNomina;
     }
 }

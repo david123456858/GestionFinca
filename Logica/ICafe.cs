@@ -25,9 +25,15 @@ namespace Logica
             throw new NotImplementedException();
         }
 
-        public List<Reg_Cafés> GetAll()
+        public List<Reg_Cafés> GetAll(string admin)
         {
-            throw new NotImplementedException();
+           return registrado.GetAll(admin);
+        }
+        public List<Reg_Cafés> BuscarPorTodo(string valor)
+        {
+            List<Reg_Cafés> lista = new List<Reg_Cafés>();
+            return lista;
+
         }
     }
 }
