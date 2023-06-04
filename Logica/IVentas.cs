@@ -32,14 +32,16 @@ namespace Logica
         {
             return ventas.GetAll(admin);
         }
-        public List<Detalle_Factura_Venta> BuscarPorTodo(string valor)
+        public List<Detalle_Factura_Venta> BuscarPorTodo(string valor,string admin)
         {
-            return ventas.BuscarPorTodo(valor);
+            return ventas.BuscarPorTodo(valor,admin);
         }
 
         List<Factura_Ventas> Iservice<Factura_Ventas>.GetAll(string admin)
         {
             throw new NotImplementedException();
         }
+
+
     }
 }

@@ -46,7 +46,7 @@ namespace Presentacion
 
         private void Usuario_Enter(object sender, EventArgs e)
         {
-            if (Usuario.Text == "Usuario") {
+            if (Usuario.Text == "Cedula") {
                 Usuario.Text = "";
             }
         }
@@ -55,7 +55,7 @@ namespace Presentacion
         {
             if (Usuario.Text == "")
             {
-                Usuario.Text = "Usuario";
+                Usuario.Text = "Cedula";
             }
         }
 

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -22,6 +23,7 @@ namespace Presentacion
         }
 
         ICafe ServiciosCafe = new ICafe();  //CAFE A RECOGER
+        Reportes reportes= new Reportes();
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -44,32 +46,51 @@ namespace Presentacion
 
         void RegistroCafe()
         {
-            Logica.ICafe icafe = new Logica.ICafe();
-            var cafe = new Reg_Cafés();
+            if ((string.IsNullOrEmpty(TxtKilosC.Text)) || (string.IsNullOrEmpty(TxtKilosS.Text)) || (string.IsNullOrEmpty(txtE_cedula_A2.Text))){
 
-            cafe.CC_ADMIN = txtE_cedula_A2.Text;
-            cafe.Cereza_Kilos = TxtKilosC.Text;
-            cafe.Secos_Kilos = TxtKilosS.Text;
-            var estado = icafe.Add(cafe);
-            MessageBox.Show(estado.ToString());
-            LimpiarCamposCafe();
+                MessageBox.Show("DIGITE VALOR EN TODOS LOS CAMPOS");
+            }
+            else
+            {
+                Logica.ICafe icafe = new Logica.ICafe();
+                var cafe = new Reg_Cafés();
+
+                cafe.CC_ADMIN = txtE_cedula_A2.Text;
+                cafe.Cereza_Kilos = TxtKilosC.Text;
+                cafe.Secos_Kilos = TxtKilosS.Text;
+                var estado = icafe.Add(cafe);
+                MessageBox.Show(estado.ToString());
+                LimpiarCamposCafe();
+                
+                if (estado.StartsWith("R"))
+                {
+                    dataGridCafe.Rows.Clear();
+                }
+                VerDatosCafe();
+
+            }
+            
         }
 
         void VerDatosCafe()
         {
             var lista = ServiciosCafe.GetAll(txtE_cedula_A2.Text);
-            dataGridCafe.Rows.Clear();
+            
 
-            foreach (var item in lista)
+            if (lista != null)
             {
-                dataGridCafe.Rows.Add(new object[]
+                foreach (var item in lista)
                 {
-                    item.id_cafe,
-                    item.Cereza_Kilos,
-                    item.Secos_Kilos,
-                    item.Fecha
-                });
+                    dataGridCafe.Rows.Add(new object[]
+                    {
+                        item.id_cafe,
+                        item.Secos_Kilos,
+                        item.Cereza_Kilos,
+                        item.Fecha
+                    });
+                }
             }
+               
         }
 
         void LimpiarCamposCafe()
@@ -83,21 +104,12 @@ namespace Presentacion
             txtE_cedula_A2.Text = logInForm.Admint;
             VerDatosCafe();
         }
-        void Actualiza()
-        {
-            Logica.ICafe icafe = new Logica.ICafe();
-            var cafe = new Reg_Cafés();
 
-            cafe.CC_ADMIN = txtE_cedula_A2.Text;
-            cafe.Cereza_Kilos = TxtKilosC.Text;
-            cafe.Secos_Kilos = TxtKilosS.Text;
-            var estado = icafe.Actualizar(cafe);
-            MessageBox.Show(estado.ToString());
-            LimpiarCamposCafe();
-        }
-        private void button2_Click(object sender, EventArgs e)
+        private void btnPdfCafe_Click(object sender, EventArgs e)
         {
-            Actualiza();
+            reportes.RptListadoCafe(ServiciosCafe.GetAll(txtE_cedula_A2.Text), "REPORTE DE CAFE");
+            Process.Start("REPORTE DE CAFE.pdf");
+
         }
     }
 }

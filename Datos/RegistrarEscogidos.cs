@@ -25,12 +25,23 @@ namespace Datos
                 command.Parameters.Add("RE_fecha", OracleDbType.Date).Value = registro.Fecha;
                 command.ExecuteNonQuery();
                 conexion.CerrarBd();
-                return "La cantidad ha sido guardado";
+                return "REGISTRO GUARDADO";
             }
-            catch (Exception e)
+            catch (OracleException ex)
             {
+                if (ex.Number == 1)
+                {
+                    return "ESTE REGISTRO YA EXISTE."; // Mensaje personalizado para la restricción única
+                }
 
-                return e.Message;
+                if (ex.Number == 2291) // Número de error específico para violación de la llave foránea en Oracle
+                {
+                    return "NO SE ENCUENTRA EL JEFE CON ESTA CEDULA, POR FAVOR VERIFIQUE";
+                }
+                else
+                {
+                    return "ERROR DE " + ex.Message; // Mostrar el mensaje de la excepción de Oracle
+                }
             }
         }
         public List<Reg_Escogidos> GetAll(string admin)

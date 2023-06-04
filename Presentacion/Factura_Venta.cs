@@ -44,42 +44,71 @@ namespace Presentacion
         }
         void RegistroDetalle()
         {
-            var ventas = new Detalle_Factura_Venta();
-            ventas.CC_ADMIN = txtE_cedula_A4.Text;
-            ventas.Id_Venta = txtFV_ref_facturaV.Text;
-            ventas.cafe = txtRV_cafe.Text;
-            ventas.valor_kilo = decimal.Parse(txtRV_valorXKilo.Text);
-            ventas.valor_base = decimal.Parse(txtRV_valor_B.Text);
-            ventas.Factor = txtRV_factor.Text;
-            ventas.tipo_cafe = txtRV_tipocafe.Text;
-            ventas.kilos_netos = decimal.Parse(txtRV_kiloneto.Text);
-            var estado = ServicioVentas.add(ventas);
-            MessageBox.Show(estado.ToString());
-            LimpiarCamposVentas();
+            if ((string.IsNullOrEmpty(txtFV_ref_facturaV.Text) || (string.IsNullOrEmpty(txtRV_cafe.Text) || (string.IsNullOrEmpty(txtRV_valorXKilo.Text)) || (string.IsNullOrEmpty(txtRV_valor_B.Text)) || (string.IsNullOrEmpty(txtRV_factor.Text) || (string.IsNullOrEmpty(txtRV_tipocafe.Text)) || (string.IsNullOrEmpty(txtRV_kiloneto.Text)))))) {
+                MessageBox.Show("LLENE TODOS LOS CAMPOS");
+            }
+            else
+            {
+                var ventas = new Detalle_Factura_Venta();
+                if (string.IsNullOrEmpty(txtE_cedula_A4.Text))
+                {
+                    ventas.CC_ADMIN = logInForm.Admint;
+                }
+                else
+                {
+                    ventas.CC_ADMIN = txtE_cedula_A4.Text;
+                }
+               
+                ventas.Id_Venta = txtFV_ref_facturaV.Text;
+                ventas.cafe = txtRV_cafe.Text;
+                ventas.valor_kilo = decimal.Parse(txtRV_valorXKilo.Text);
+                ventas.valor_base = decimal.Parse(txtRV_valor_B.Text);
+                ventas.Factor = txtRV_factor.Text;
+                ventas.tipo_cafe = txtRV_tipocafe.Text;
+                ventas.kilos_netos = decimal.Parse(txtRV_kiloneto.Text);
+                var estado = ServicioVentas.add(ventas);
+                MessageBox.Show(estado.ToString());
+                LimpiarCamposVentas();
+                dataGridVenta.Rows.Clear();
+                //VerDatosVentas();
+
+
+            }
+           
 
 
         }
         void RegistroVentas()
         {
-            var ventas = new Factura_Ventas();
-            ventas.ID_venta = txtFVfacturaV.Text;
-            ventas.Nombre_Empresa = txtRV_nombre_E.Text;
-            ventas.fecha = DateTime.Parse(timepickerVenta.Text);
-            var estado = ServicioVentas.Add(ventas);
-            MessageBox.Show(estado.ToString());
-            LimpiarCamposVentas();
-            VerDatosVentas();
+            if (string.IsNullOrEmpty(txtFVfacturaV.Text) || (string.IsNullOrEmpty(txtRV_nombre_E.Text)))
+            {
+                MessageBox.Show("LLENE TODOS LOS CAMPOS");
+            }
+            else
+            {
+                var ventas = new Factura_Ventas();
+                ventas.ID_venta = txtFVfacturaV.Text;
+                ventas.Nombre_Empresa = txtRV_nombre_E.Text;
+                ventas.fecha = DateTime.Parse(timepickerVenta.Text);
+                var estado = ServicioVentas.Add(ventas);
+                MessageBox.Show(estado.ToString());
+                LimpiarCamposVentas();
+               
+            }
+            
         }
 
         void VerDatosVentas()
         {
             List<Detalle_Factura_Venta> lista = ServicioVentas.GetAlls(txtE_cedula_A4.Text);
-            dataGridVenta.Rows.Clear();
-            foreach (var item in lista)
+           
+            if (lista != null)
             {
-
-                dataGridVenta.Rows.Add(new object[]
+                foreach (var item in lista)
                 {
+
+                    dataGridVenta.Rows.Add(new object[]
+                    {
                     item.Id_Venta,
                     item.Nombre,
                     item.cafe,
@@ -90,8 +119,10 @@ namespace Presentacion
                     item.kilos_netos,
                     item.total_pagar,
                     item.fecha
-                });
+                    });
+                }
             }
+           
 
         }
 
@@ -129,14 +160,17 @@ namespace Presentacion
 
         private void busquedaVenta_TextChanged(object sender, EventArgs e)
         {
-            if (busquedaVenta.Text == "")
-            {
-                VerDatosVentas();
-            }
-            var busqueda = ServicioVentas.BuscarPorTodo(busquedaVenta.Text);
-            foreach (var item in busqueda)
+            if (string.IsNullOrEmpty(busquedaVenta.Text))
             {
                 dataGridVenta.Rows.Clear();
+                VerDatosVentas();
+
+            }
+            var busqueda = ServicioVentas.BuscarPorTodo(busquedaVenta.Text,txtE_cedula_A4.Text);
+            dataGridVenta.Rows.Clear();
+            foreach (var item in busqueda)
+            {
+                
                 dataGridVenta.Rows.Add(new object[]
                 {
                     item.Id_Venta,

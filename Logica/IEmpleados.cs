@@ -40,5 +40,10 @@ namespace Logica
         {
             return repositorioEmpleados.GetAll(admin);
         }
+
+        public string BuscarEmpleado(string cedula)
+        {
+            return repositorioEmpleados.BuscarEmpleadoPorCedula(cedula);
+        }
     }
 }

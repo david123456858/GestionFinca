@@ -27,10 +27,21 @@ namespace Datos
                 conexion.CerrarBd();
                 return "Venta Registrada";
             }
-            catch (Exception e)
+            catch (OracleException ex)
             {
-                return e.Message;
-                
+                if (ex.Number == 1)
+                {
+                    return "ESTA VENTA YA EXISTE."; // Mensaje personalizado para la restricción única
+                }
+                else
+                {
+                    return "ERROR DE " + ex.Message; // Mostrar el mensaje de la excepción de Oracle
+                }
+            }
+
+            catch (Exception)
+            {
+                return "ERROR DE GUARDADO";
             }
         }
         public string RegistrarDetalleVenta(Detalle_Factura_Venta venta)
@@ -51,14 +62,27 @@ namespace Datos
                 command.Parameters.Add("DFV_valor_baseKilo", OracleDbType.Decimal).Value = venta.valor_base;
                 command.ExecuteNonQuery();
                 CerrarBd();
-                return "Destalle de venta registrada";
+                return "Detalle de venta registrada";
             }
-            catch (Exception)
+            catch (OracleException ex)
             {
+                if (ex.Number == 1)
+                {
+                    return "ESTE DETALLE DE VENTA YA FUE REALIZADO."; // Mensaje personalizado para la restricción única
+                }
 
-                throw;
+                if (ex.Number == 2291) // Número de error específico para violación de la llave foránea en Oracle
+                {
+                    return "NO SE ENCUENTRA EL NUMERO DE FACTURA, POR FAVOR VERIFIQUE";
+                }
+
+                else
+                {
+                    return "ERROR DE " + ex.Message; // Mostrar el mensaje de la excepción de Oracle
+                }
             }
         }
+
         public List<Detalle_Factura_Venta> GetAll(string admin)
         {
             try
@@ -122,10 +146,10 @@ namespace Datos
                 return null;
             }
         }
-        public List<Detalle_Factura_Venta> BuscarPorTodo(string algo)
+        public List<Detalle_Factura_Venta> BuscarPorTodo(string algo,string admin)
         {
             List<Detalle_Factura_Venta> f = new List<Detalle_Factura_Venta> ();
-            foreach (var item in GetAll())
+            foreach (var item in GetAll(admin))
             {
                 if (item.Id_Venta.StartsWith(algo)|| item.cafe.StartsWith(algo)|| item.tipo_cafe.StartsWith(algo))
                 {

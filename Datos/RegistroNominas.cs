@@ -27,10 +27,21 @@ namespace Datos
                 conexion.CerrarBd();
                 return "Nomina registrada";
             }
-            catch (Exception)
+            catch (OracleException ex)
             {
+                if (ex.Number == 1)
+                {
+                    return "ESTA NOMINA YA EXISTE."; // Mensaje personalizado para la restricción única
+                }
 
-                throw;
+                if (ex.Number == 2291) // Número de error específico para violación de la llave foránea en Oracle
+                {
+                    return "NO SE ENCUENTRA EL JEFE CON ESTA CEDULA, POR FAVOR VERIFIQUE";
+                }
+                else
+                {
+                    return "ERROR DE " + ex.Message; // Mostrar el mensaje de la excepción de Oracle
+                }
             }
         }
         public List<Nomina> GetAll(string admin)
@@ -69,7 +80,8 @@ namespace Datos
             nomina.Total_Pedidos = decimal.Parse(linea.GetString(6));
             nomina.Salario_Base = decimal.Parse(linea.GetString(7));
             nomina.Total_pagado = decimal.Parse(linea.GetString(8));
-             return nomina;
+            nomina.Fecha_nomina = linea.GetDateTime(9);
+            return nomina;
         }
     }
 }

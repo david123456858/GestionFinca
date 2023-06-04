@@ -28,10 +28,21 @@ namespace Datos
                 return "Registro Guardado en la Base";
 
             }
-            catch (Exception e)
+            catch (OracleException ex)
             {
+                if (ex.Number == 1)
+                {
+                    return "ESTE CAFE YA EXISTE."; // Mensaje personalizado para la restricción única
+                }
 
-                return e.Message;
+                if (ex.Number == 2291) // Número de error específico para violación de la llave foránea en Oracle
+                {
+                    return "NO SE ENCUENTRA EL JEFE CON ESTA CEDULA, POR FAVOR VERIFIQUE";
+                }
+                else
+                {
+                    return "ERROR DE " + ex.Message; // Mostrar el mensaje de la excepción de Oracle
+                }
             }
         }
         public List<Reg_Cafés> GetAll(string admin)
@@ -86,7 +97,7 @@ namespace Datos
             catch (Exception)
             {
 
-                throw;
+                return "NO SE PUDO ACTUALIZAR,VERIFIQUE LOS CAMPOS";
             }
         }
     }

@@ -14,7 +14,7 @@ namespace Datos
         OracleCommand command;
         OracleConnection connection;
         Datos.Conexion conexion = new Datos.Conexion();
-        public string RegistrarPedido(Pedidos pedido)
+        public string RegistrarPedido(Pedidos pedido) //FACTURA PEDIDOS
         {
             try
             {
@@ -29,13 +29,24 @@ namespace Datos
                 conexion.CerrarBd();
                 return "Pedido registrado";
             }
-            catch (Exception e)
+            catch (OracleException ex)
             {
+                if (ex.Number == 1)
+                {
+                    return "ESTE NUMERO DE FACTURA YA EXISTE."; // Mensaje personalizado para la restricción única
+                }
 
-                return e.Message;
+                if (ex.Number == 2291) // Número de error específico para violación de la llave foránea en Oracle
+                {
+                    return "NO SE ENCUENTRA EL JEFE CON ESTA CEDULA, POR FAVOR VERIFIQUE";
+                }
+                else
+                {
+                    return "ERROR DE " + ex.Message; // Mostrar el mensaje de la excepción de Oracle
+                }
             }
         }
-        public string RegistrarDetallePedido(Detalle_Pedidos pedido)
+        public string RegistrarDetallePedido(Detalle_Pedidos pedido) //DETALLE PEDIDO
         {
             try
             {
