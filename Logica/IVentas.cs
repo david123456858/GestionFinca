@@ -11,7 +11,7 @@ namespace Logica
 {
     public class IVentas : Iservice<Factura_Ventas>
     {
-        RepositorioVentas ventas = new RepositorioVentas();
+        RepositorioVentas servicesShop = new RepositorioVentas();
         Conexion conexion = new Conexion();
         public string Add(Factura_Ventas entity)
         {
@@ -23,10 +23,6 @@ namespace Logica
             var respuesta = ventas.RegistrarDetalleVenta(entity);
             return respuesta;
         }
-        public string Buscar(Factura_Ventas entity)
-        {
-            throw new NotImplementedException();
-        }
 
         public List<Detalle_Factura_Venta> GetAlls(string admin)
         {
@@ -37,11 +33,6 @@ namespace Logica
             return ventas.BuscarPorTodo(valor,admin);
         }
 
-        List<Factura_Ventas> Iservice<Factura_Ventas>.GetAll(string admin)
-        {
-            throw new NotImplementedException();
-        }
-
-
+    
     }
 }

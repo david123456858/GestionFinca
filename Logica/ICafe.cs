@@ -24,11 +24,6 @@ namespace Logica
             return estado;
         }
 
-        public string Buscar(Reg_Cafés entity)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Reg_Cafés> GetAll(string admin)
         {
            return registrado.GetAll(admin);

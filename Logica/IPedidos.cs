@@ -24,11 +24,6 @@ namespace Logica
             return estado;
         }
 
-        public string Buscar(Pedidos entity)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Pedidos> GetAll(string admin)
         {
             return pedidos.GetAll(admin);

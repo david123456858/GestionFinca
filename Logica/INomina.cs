@@ -17,11 +17,6 @@ namespace Logica
             return estado;
         }
 
-        public string Buscar(Nomina entity)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Nomina> GetAll(string admin)
         {
             return registro.GetAll(admin);

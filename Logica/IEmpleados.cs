@@ -31,11 +31,7 @@ namespace Logica
             
           return repositorioEmpleados.BuscarPorTodo(valor);
         }
-        public string Buscar(Empleado entity)
-        {
-            throw new NotImplementedException();
-        }
-
+        
         public List<Empleado> GetAll(string admin)
         {
             return repositorioEmpleados.GetAll(admin);

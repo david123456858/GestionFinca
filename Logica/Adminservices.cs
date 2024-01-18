@@ -19,18 +19,6 @@ namespace Logica
             return estado;
         }
 
-
-
-        public string Buscar(Admin entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Admin> GetAll(string admin)
-        {
-            throw new NotImplementedException();
-        }
-
         public string verificarUser(Admin admin)
         {
             try
